@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>acspacca.github.io</title>
+    <meta name="description" content="Default landing page for acspacca.github.io" />
+    <meta name="theme-color" content="#0b5cff" />
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #0b5cff;
+            --muted: #9aa7c7
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial
+        }
+
+        body {
+            background: linear-gradient(180deg,var(--bg),#061025);
+            color: #e6f0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px
+        }
+
+        .card {
+            max-width: 880px;
+            width: 100%;
+            background: linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.6)
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: clamp(1.6rem,3vw,2.2rem)
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            color: var(--muted)
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 14px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600
+        }
+
+        footer {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 0.9rem
+        }
+
+        @media (max-width:520px) {
+            .card {
+                padding: 18px
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card" role="main">
+        <h1>acspacca.github.io</h1>
+        <p>This is the default landing page for the repository. Replace this file with your site content, or update it to point to your project pages.</p>
+
+        <p>
+            <a class="button" href="https://github.com/acspacca/acspacca.github.io" target="_blank" rel="noopener">View repository</a>
+        </p>
+
+        <footer>
+            Deployed from <code>index.html</code>. To replace this page, edit <code>index.html</code> in the repository root.
+        </footer>
+    </main>
+</body>
+</html>
