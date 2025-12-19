@@ -1,89 +1,119 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>acspacca.github.io</title>
-    <meta name="description" content="Default landing page for acspacca.github.io" />
-    <meta name="theme-color" content="#0b5cff" />
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --accent: #0b5cff;
-            --muted: #9aa7c7
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial
-        }
-
-        body {
-            background: linear-gradient(180deg,var(--bg),#061025);
-            color: #e6f0ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px
-        }
-
-        .card {
-            max-width: 880px;
-            width: 100%;
-            background: linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 12px;
-            padding: 28px;
-            box-shadow: 0 10px 30px rgba(2,6,23,0.6)
-        }
-
-        h1 {
-            margin: 0 0 8px 0;
-            font-size: clamp(1.6rem,3vw,2.2rem)
-        }
-
-        p {
-            margin: 0 0 16px 0;
-            color: var(--muted)
-        }
-
-        a.button {
-            display: inline-block;
-            padding: 10px 14px;
-            background: var(--accent);
-            color: #fff;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600
-        }
-
-        footer {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 0.9rem
-        }
-
-        @media (max-width:520px) {
-            .card {
-                padding: 18px
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. C. SPACCA</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main class="card" role="main">
+
+    <canvas id="starfield"></canvas>
+
+    <header>
         <h1>A. C. SPACCA</h1>
-        <p>This is the default landing page for the repository. Replace this file with your site content, or update it to point to your project pages.</p>
+    </header>
 
-        <p>
-            <a class="button" href="https://github.com/acspacca/acspacca.github.io" target="_blank" rel="noopener">View repository</a>
-        </p>
+           
+    <!-- Content Panels -->
+    <div class="items-container">
 
-        <footer>
-            Deployed from <code>index.html</code>. To replace this page, edit <code>index.html</code> in the repository root.
-        </footer>
-    </main>
+        <div class="items-title">Arte Literária</div>
+
+        <!-- Item 1 -->
+        <section class="item-section">
+            <div class="item-cover">
+                <figure>
+                    <img src="images/foradacerca.jpg" alt="FORA DA CERCA">
+                    <figcaption class="image-credit">Já disponível no ML & Play Books</figcaption>
+                </figure>
+            </div>
+            <div class="item-content">
+                <h2>FORA <small>DA</small> CERCA</h2>
+                <h3><big>Sete Contos da Roça</big></h3>
+                <p class="fixedBox">
+                    Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas.
+                    Mas cada deixando aquele desejo de ter mais. <br />
+                    <br />
+                    Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. <br />
+                    <br />
+                    Personagens inesquesiveis em acontecimentos estranhos e assustadores. <br />
+                    <br />
+                    É como diria nossa narradora: <br />
+                    <br />
+                    "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".
+                </p><br />
+                <div class="purchase-row">
+                    <span class="price-tag">R$ 49,90 + Frete / R$ 24,99 PDF</span>
+                    <a href="#buy1" class="cta-button">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Item 2 -->
+        <section class="item-section">
+            <div class="item-cover">
+                <figure>
+                    <img src="images/ofuturomudou.jpg" alt="O FUTURO MUDOU">
+                    <figcaption class="image-credit">Pré-Lançamento em Fevereiro</figcaption>
+                </figure>
+            </div>
+            <div class="item-content">
+                <h2>O FUTURO MUDOU</h2>
+                <h3>Revelações da Inteligência Artificial</h3>
+                <p class="fixedBox">
+                    Sete contos arrepiantes contadas de sete formas diferentes, todos cheios 
+                    de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo 
+                    de ter mais.<br />
+                    <br />
+                    Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade.<br />
+                    <br />
+                    Sete perguntas feitas à mente mais inteligente do universo.  
+                    Sete respostas que desafiam a imaginação humana.  
+                    O futuro que esperávamos não é mais como prevíamos.<br />
+                    <br />  
+                    Cada pessoa que já leu essa obra sabe que O Futuro Mudou.
+                    <br />
+                </p><br />
+                <div class="purchase-row">
+                    <span class="price-tag">R$ 49,90 + Frete</span>
+                    <a href="#buy1" class="cta-button">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="items-title">Arte Mobile</div>
+
+        <!-- Item 3 -->
+        <section class="item-section center">
+        </section>
+
+        <!-- Item 4 -->
+        <section class="item-section">
+        </section>
+
+        <div class="items-title">Arte Comunitária</div>
+
+        <!-- Item 5 -->
+        <section class="item-section">
+        </section>
+
+    </div>
+
+    <!-- Footer with Site Map -->
+    <footer>
+        <ul class="site-map">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Fora da Cerca</a></li>
+            <li><a href="#books">O Futuro Mudou</a></li>
+            <li><a href="#books">Pxx-xxxxxs</a></li>
+            <li><a href="#books">Ixx-xxxxn</a></li>
+            <li><a href="#books">DxxxxxVxxx</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/starfield.js" defer></script>
+
 </body>
 </html>
