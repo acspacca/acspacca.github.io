@@ -29,6 +29,13 @@ header {
         font-family: Verdana, serif;
     }
 
+a {
+    color: #ffeb3b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
 .items-container {
     display: flex;
     gap: 2rem;
@@ -83,7 +90,7 @@ header {
 }
 
 .item-cover img {
-    max-width: 150px;
+    max-width: 300px;
     border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
@@ -148,7 +155,7 @@ header {
 }
 
 footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.2);
     text-align: center;
@@ -183,3 +190,48 @@ footer {
             color: rgba(255,255,255,0.7); /* slightly brighter on hover */
         }
 
+
+/* Products grid (responsive cards) */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Individual product card */
+.product-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+/* Image area */
+.product-image {
+  max-width: 140px;
+  flex-shrink: 0;
+}
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Description area */
+.product-desc {
+  text-align: justify;
+  font-size: 0.95rem;
+}
+
+/* Small screens */
+@media (max-width: 550px) {
+    .item-cover figure {
+        float: left;
+        margin: 0 1rem 2rem 0;
+        text-align: center;
+    }
+}        
