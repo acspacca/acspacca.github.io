@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family:  'Georgia', serif;
     color: #fff;
     min-height: 100vh;
     padding: 2rem;
@@ -252,5 +252,6 @@ footer {
         float: left;
         margin: 0 1rem 2rem 0;
         text-align: center;
+        width: 300px;
     }
 }        
