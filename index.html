@@ -10,45 +10,42 @@
 
 <body>
 
+    <div class="lang-switch">
+        <img src="images/br-flag.png" alt="Português" id="ptBtn">
+        <img src="images/us-flag.png" alt="English" id="enBtn">
+    </div>
+
     <header>
         <canvas id="starfield"></canvas>
         <div class="header-content">
             <h1>A. C. SPACCA</h1>
-            <p>...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
+            <p class="lang lang-pt">...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
+            <p class="lang lang-en">...in his latest series: STRANGE AND SCARY</p>
         </div>
         <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" id="aboutBtn">
     </header>
 
     <div class="notice-bar">
-        <p>This site has not been promoted yet and is under construction - Come back soon!</p>
+        <p class="lang lang-pt">Este site ainda não foi promovido e está em construção - Volte em breve!</p>
+        <p class="lang lang-en">This site has not been promoted yet and is under construction - Come back soon!</p>
     </div>
-
-
-    <div class="lang-switch">
-        <img src="images/br_flag.png" alt="Português" id="ptBtn">
-        <img src="images/us_flag.png" alt="English" id="enBtn">
-    </div>
-
-    <!-- Google Translate element -->
-    <div id="google_translate_element" style="display:none;"></div>
 
     <section class="books">
 
-        <h2>Livros Publicados</h2>
+        <h2 class="lang lang-pt">Livros Publicados</h2>
+        <h2 class="lang lang-en">Published Books</h2>
 
         <div class="book-row">
 
             <div class="book-card">
                 <img src="images/foradacerca.jpg" alt="The Silent Horizon cover" class="book-cover">
                 <div class="book-info">
-                    <h3>Fora da Cerca</h3>
-                    <h4>Sete Contos da Roça</h4>
-                    <p>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios
-                        e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida
-                        e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em
-                        acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é
-                        pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se
-                        esbaldar!".</p>
+                    <h3 class="lang lang-pt">Fora da Cerca</h3>
+                    <h4 class="lang lang-pt">Sete Contos da Roça</h4>
+                    <p class="lang lang-pt">Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
+                    <h3 class="lang lang-en">Over The Fence</h3>
+                    <h4 class="lang lang-en">Seven Tales from the Countryside</h4>
+                    <p class="lang lang-en">Seven chilling tales told in seven different ways, all full of adventures, mysteries, and surprises. But each leaving that desire for more. A collection that will not only be read and reread but also told wherever there is an opportunity. Unforgettable characters in strange and scary events.<br /><br />As our narrator would say: "It's for laughing and it's for crying, it's for feeling scared, and it's for being amazed, but outside the fence, it's really for having fun!".</p>
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
@@ -59,17 +56,16 @@
             </div>
 
             <div class="book-card new">
-                <span class="badge">New</span>
+                <span class="lang lang-pt badge">Novo</span>
+                <span class="lang lang-en badge">New</span>
                 <img src="images/ofuturomudou.jpg" alt="Echoes of Tomorrow cover" class="book-cover">
                 <div class="book-info">
-                    <h3>O Futuro Mudou</h3>
-                    <h4>Revelações da Inteligência Artificial</h4>
-                    <p>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da
-                        inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas
-                        assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras
-                        desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo
-                        talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São
-                        revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+                    <h3 class="lang lang-pt">O Futuro Mudou</h3>
+                    <h4 class="lang lang-pt">Revelações da Inteligência Artificial</h4>
+                    <p class="lang lang-pt">Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+                    <h3 class="lang lang-en">The Future Has Changed</h3>
+                    <h4 class="lang lang-en">Revelations of Artificial Intelligence</h4>
+                    <p class="lang lang-en">Nine revelations present nine electrifying tales that explore the impact of the arrival of artificial intelligence on the future humanity thought it knew. From haunted ruins, a lunar colony, to the depths illuminated by cities, these adventures unravel the terrifying beauty of a world reshaped by the smartest mind the universe may never have intended to conceive.<br /><br />These nine stories are not warnings. They are revelations. Leaving the doubt: Is this fiction or reality?</p>  
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
@@ -84,20 +80,23 @@
 
     <section class="upcoming">
 
-        <h2>Lançamento em breve...</h2>
+        <h2 class="lang lang-pt">Lançamento em breve...</h2>
+        <h2 class="lang lang-en">Coming Soon...</h2>
 
         <div class="book-card upcoming-card">
             <img src="images/corredoresdosubmundo.jpg" alt="The Silent Horizon cover" class="book-cover">
             <div class="book-info">
-                <h3>Corredores do Submundo</h3>
-                <h4>A Vida Após Exaustão da Crosta</h4>
-                <p>O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o
-                    planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais,
-                    sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br /><br />Mas as crianças viam
-                    o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se
-                    tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se
-                    seguiram nos Corredores do Submundo.</p>
-                <div class="links">
+                <h3 class="lang lang-pt">Corredores do Submundo</h3>
+                <h4 class="lang lang-pt">A Vida Após Exaustão da Crosta</h4>
+                <p class="lang lang-pt">O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais, sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br /><br />Mas as crianças viam o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se seguiram nos Corredores do Submundo.</p>
+                <h3 class="lang lang-en">Underworld Corridors</h3>
+                <h4 class="lang lang-en">Life After Crust Exhaustion</h4>
+                <p class="lang lang-en">The world was finally shattered by a coronal mass ejection that tore the atmosphere and covered the planet with a terrifying and suffocating gray dust. The surface became without green, without animals, without hope. Adults, resigned, lost the will to fight.<br /><br />But children saw the end as stages of adventures. Together, they dug a tunnel that seemed just a game but became a hidden sanctuary underground. These are "Strange and Scary" stories that followed in the Underworld Corridors.</p>
+                <div class="lang lang-pt links">
+                    <a href="#">Reserve no Amazon</a>
+                    <a href="#">Reserve no Barnes & Noble</a>
+                </div>
+                <div class="lang lang-en links">
                     <a href="#">Pre-order on Amazon</a>
                     <a href="#">Pre-order on Barnes & Noble</a>
                 </div>
@@ -107,32 +106,37 @@
     </section>
 
     <section class="side-project">
-        <h2>Outros Projetos</h2>
+        <h2 class="lang lang-pt">Outros Projetos</h2>
+        <h2 class="lang lang-en">Other Projects</h2>
         <div class="app-row">
             <!-- First project -->
             <div class="app-card">
                 <img src="images/wof1.png" alt="App screenshot" class="app-image">
                 <div class="app-info">
-                    <h3>XXX-XXXXXX</h3>
-                    <p>Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo arcade dos anos 70 em
-                        desenvolvimento para lançamento no inicio de 2026.</p>
-                    <div class="download-links">
-                        <a href="#">Get it on Google Play</a>
-                    </div>
+                    <h3 class="lang lang-pt">XXX-XXXXXX</h3>
+                    <h3 class="lang lang-en">XXX-XXXXXX</h3>
+                    <p class="lang lang-pt">Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo arcade dos anos 70 em desenvolvimento para lançamento no inicio de 2026.</p>
+                    <p class="lang lang-en">A addictive mobile game of adventure and ghostly mystery in the style of 70s arcade games under development for release at the beginning of 2026.</p>
+                    <div class="lang lang-pt download-links"><a href="#">Download no Google Play</a></div>
+                    <div class="lang lang-en download-links"><a href="#">Get it on Google Play</a></div>
                 </div>
             </div>
             <!-- Second project -->
             <div class="app-card">
-                <div class="app-info">
-                    <h3>Status Atual de Automatizações</h3>
-                    <div class="" class="label">Superficie</div>
-                    <div class="" id="readings1" class="label">Leitura 1</div>
-                    <div class="" class="label">Subsuperficie Esteril</div>
-                    <div class="" id="readings2" class="label">Leitura 2</div>
-                    <div class="" class="label">Subsuperficie Esteril sem Climatização</div>
-                    <div class="" id="readings3" class="label">Leitura 3</div>
-                    <div class="" id="overall" class="label">Margem de 94% com a terceira série aguardando <b
-                            id="ttl">188</b> dias de reatividade.</div>
+                <div class="app-info" style="text-align: left;">
+                    <h3 class="lang lang-pt">Status Atual de Automatizações</h3>
+                    <h3 class="lang lang-en">Current Status of Automations</h3>
+                    <div class="lang lang-pt ">Superficie</div>
+                    <div class="lang lang-en ">Surface</div>
+                    <div id="readings1">Reading 1</div>
+                    <div class="lang lang-pt ">Subsuperficie Esteril</div>
+                    <div class="lang lang-en ">Sterile Subsurface</div>
+                    <div id="readings2">Reading 2</div>
+                    <div class="lang lang-pt ">Subsuperficie Esteril sem Climatização</div>
+                    <div class="lang lang-en ">Sterile Subsurface without Climate Control</div>
+                    <div id="readings3">Reading 3</div>
+                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b> dias de reação.</div>
+                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b> days of reaction.</div>  
                 </div>
             </div>
         </div>
@@ -156,59 +160,48 @@
     </section>
 
     <footer>
-        <p>© 2026 A. C. SPACCA - Todos os Direitos Reservados.</p>
-        <p>Follow on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+        <p class="lang lang-pt">© 2026 A. C. SPACCA - Todos os Direitos Reservados.</p>
+        <p class="lang lang-en">© 2026 A. C. SPACCA - All Rights Reserved.</p>
+        <p class="lang lang-pt">Siga no <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+        <p class="lang lang-en">Follow on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
     </footer>
 
     <!-- About Modal -->
     <div id="aboutModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Declaração de Missão de Pesquisa</h2>
-            <p>
-            <h4>No CELOBI – Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a
-                fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
-            A missão possui três objetivos interconectados:<br /><br />
-            ● <b>Astrobiologia e Panspermia:</b> Investigar material análogo à panspermia para compreender sua
-            resiliência e potencial atividade biológica.<br /><br />
-            ● <b>Engenharia Estéril Subterrânea:</b> Desenvolver um sistema subterrâneo totalmente automatizado de
-            incubação para cultivar material análogo extraterrestre sem contaminação da biosfera da
-            subsuperficie.<br /><br />
-            ● <b>Senescência e Saúde Humana:</b> Identificar substâncias bioativas exógenas capazes de eliminar células
-            senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a
-            medicina regenerativa.<br /><br />
-            Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo de forma aberta, o
-            CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.
-            </p>
+            <h2 class="lang lang-pt">Declaração de Missão de Pesquisa</h2>
+            <h4 class="lang lang-pt">No CELOBI - Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4></p>
+            <p class="lang lang-pt">A missão possui três objetivos interconectados:</p>
+            <p class="lang lang-pt">● <b>Astrobiologia e Panspermia:</b> Investigar material análogo à panspermia para compreender sua resiliência e potencial atividade biológica.</p>
+            <p class="lang lang-pt">● <b>Engenharia Estéril Subterrânea:</b> Desenvolver um sistema subterrâneo totalmente automatizado de incubação para cultivar material análogo extraterrestre sem contaminação da biosfera da subsuperficie.</p>
+            <p class="lang lang-pt">● <b>Senescência e Saúde Humana:</b> Identificar substâncias bioativas exógenas capazes de eliminar células senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a medicina regenerativa.</p>
+            <p class="lang lang-pt">Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.</p>
+            <h2 class="lang lang-en">Research Mission Statement</h2>
+            <h4 class="lang lang-en">At CELOBI - Center for Studies in Biological Logistics, we lead a pioneering effort to explore the frontier where astrobiology, engineering, and biology intersect.</h4></p>
+            <p class="lang lang-en">The mission has three interconnected objectives:</p>
+            <p class="lang lang-en">● <b>Astrobiology and Panspermia:</b> Investigate panspermia-analog material to understand its resilience and potential biological activity.</p>
+            <p class="lang lang-en">● <b>Sterile Underground Engineering:</b> Develop a fully automated underground incubation system to cultivate extraterrestrial-analog material without contamination by the subsurface biosphere.</p>
+            <p class="lang lang-en">● <b>Senescence and Human Health:</b> Identify bioactive exogenous substances capable of eliminating senescent cells or modulating their harmful secretory phenotype, with profound implications for longevity and regenerative medicine.</p>
+            <p class="lang lang-en">This is a costly, hostile, and low-expectation endeavor, but by documenting it openly, CELOBI ensures that even incremental advances contribute to a broader scientific dialogue.</p>
         </div>
     </div>
-
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="js/starfield.js" defer></script>
     <script src="js/modalscreens.js" defer></script>
     <script src="js/holoborder.js" defer></script>
 
     <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'en,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
+        
+    function showLanguage(lang) {
+        document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+    }
 
-        document.getElementById("ptBtn").onclick = function () {
-            alert("Tradução para Português ativada!");
-            const select = document.querySelector(".goog-te-combo");
-            if (select) { select.value = "pt"; select.dispatchEvent(new Event("change")); }
-        };
+    document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
+    document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
 
-        document.getElementById("enBtn").onclick = function () {
-            alert("English translation activated!");
-            const select = document.querySelector(".goog-te-combo");
-            if (select) { select.value = "en"; select.dispatchEvent(new Event("change")); }
-        };
+    showLanguage('pt');
 
     </script>
 

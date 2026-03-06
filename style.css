@@ -387,6 +387,14 @@ footer a:hover {
   to { border-image-source: linear-gradient(45deg, #8ea2c999, #3b608b99, #0000ff99, #bfe8ff99, #679ddb99); }
 }
 
+.lang {
+  display: none; /* hide by default */
+}
+
+.lang.active {
+  display: block; /* show the active language */
+}
+
 .lang-switch {
     position: absolute;
     top: 10px;
@@ -399,6 +407,7 @@ footer a:hover {
   width: 30px;
   height: auto;
   cursor: pointer;
+  z-index: 1002;
 }
 
 /* Responsive tweaks */
