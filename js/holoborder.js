@@ -1,3 +1,5 @@
+const collectionDate = new Date("2026-01-03");
+
 const holoImage = document.getElementById("holoImage");
 
 // Start and end gradient colors
@@ -8,6 +10,8 @@ let step = 0;
 let direction = 1; // forward (1) or backward (-1)
 const totalSteps = 10;
 const currentDate = new Date();
+const diffTime = currentDate - collectionDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
 // Function to interpolate between two hex colors
 function interpolateColor(color1, color2, factor) {
@@ -42,6 +46,7 @@ function simulateDay() {
     readingsDiv2.innerHTML = `${data.t} ${data.h} ${data.l}</p>`;
     var data = getSensorData(currentDate.getHours()-1, 10);
     readingsDiv3.innerHTML = `${data.t} ${data.h} ${data.l}</p>`;
+    document.getElementById("ttl").innerHTML = `${diffDays}`;
 }
 function updateGradient() {
     const factor = step / totalSteps;

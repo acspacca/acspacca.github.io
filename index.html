@@ -1,229 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A. C. SPACCA</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author Showcase</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <header>
+
     <canvas id="starfield"></canvas>
 
-    <header>
-        <h1>A. C. SPACCA
-        <img src="images/celobi1.jpg" style="float: right;margin-right: 40px;" width="40px"></h1>
-    </header>
-
-    <!-- Bio -->
-
-    <div class="items-container">
-        <section class="item-section">
-            <div class="item-cover">
-                <figure>
-                    <img src="images/acspacca.jpg" style="border-radius: 20px;" class="holo-border" alt="A. C. SPACCA"  width="170px">
-                </figure>
-            </div>
-            <div class="item-content">
-                <b style="font-size:1.4rem;">Sobre (Bio)</b><br/><br/>
-                Sou Aleks — desenvolvedor, autor e entusiasta em transformar ideias complexas em soluções tangíveis. Minha trajetória é movida pela curiosidade multidisciplinar, unindo Engenharia de Software, Engenharia de Sistemas, Pesquisa Científica e Literatura com um único propósito: resolver problemas reais e democratizar o conhecimento.<br/><br/>
-                <b>Engenharia de Software & Sistemas</b><br/><br/>
-                Desde os sistemas de BBS nos anos 80, passando pela evolução da Web, SOA, APPS e, atualmente, IA, minha jornada em Engenharia de Software é marcada por uma busca constante por inovação. Em Engenharia de Sistemas, minha experiência abrange desde a criação de sistemas de automação até projetos de construção civil e implementação de controles em ambientes extremos, sempre com o objetivo de transformar desafios em soluções práticas.<br/><br/>
-                <b>Ciência & Literatura</b><br/><br/>
-                No campo científico, lidero a pesquisa que explora a intersecção entre Panspermia e Biologia Incubada, buscando soluções exógenas para células senescentes. Essa visão analítica transborda para minha escrita literária, onde utilizo narrativas imaginativas para explorar conceitos científicos complexos.<br/><br/>
-                Seja projetando software, observando ao microscópio ou escrevendo histórias, meu foco é converter o abstrato em algo tangível e fundamental.
-            </div>
-        </section>
+    <div class="header-content">
+      <h1>A. C. SPACCA</h1>
+      <p>...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
     </div>
 
-    <br/>
+    <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" id="aboutBtn">
 
-    <!-- Projects -->
-    <div class="items-container">
+  </header>
 
-        <div class="items-title">Minhas Pesquizas (ativas e em laboratório)</div>
+    
 
-        <section class="item-section center">
-            <img src="images/sencencia.jpg" class="image-left" style="height:145px">
-            <p><b>Células Senecente</b><br/><br/>Células que deixam de se dividir, mas continuam metabolicamente ativas, acumulam-se nos tecidos e causam uma aglomeração. Essa pesquisa direciona as demais e busca entender esses mecanismos para desenvolver formas de estimular a eliminação dessas células, promovendo saúde e longevidade.</p>
-            <br/><a href="#" class="cta-button-small">PDF </a>
-            <p style="font-size: 0.8rem;color:darkgray;max-width: 400px;"><i>"Fato à Ficção: A base científica para o primeiro capítulo no meu livro O FUTURO MUDOU. E claro, para o resto de TUDO que faço!"</i></p>
-        </section>
-        <section class="item-section center">
-            <img src="images/biologiaincubada.jpg" class="image-left" style="width:180px;height:145px">
-            <p><b>Biologia Incubada</b><br/><br/>Automatização aplicados ao desenvolvimento biológico em ambientes controlados, buscando espécies adaptadas a condições extremas, como em ambientes altamente estéreis, sendo subterrâneos, subaquáticos ou de baixa pressão atmosférica.</p>
-            <br/><a href="#" class="cta-button-small">PDF</a>
-            <p style="font-size: 0.8rem;color:darkgray;max-width: 400px;"><i>"Fato à Ficção: Para atingir eficiência nessa transição eu vivi tudo o que meu Livro, FORA DA CERCA, expõe. Quase literalmente!"</i></p>
-        </section>
-        <section class="item-section center">
-            <img src="images/panspermia.jpg" class="image-left" style="width:190px;height:125px">
-            <p><b>Panspermia</b><br/><br/>Metodologias voltadas ao cultivo de espécies vegetais de origem exógena. O objetivo central é identificar substâncias bioativas capazes de promover a eliminação de células senescentes do organismo humano. Trata-se de uma missão de elevada complexidade, conduzida em ambientes hostis, que resultou em significativas perdas e avanços limitados. A proposta é que, por meio desse processo, sejam identificados novos compostos bioativos. Para isso, separamos incubadoras subterrâneas e subaquáticas com condições controladas de oxigênio, temperatura, umidade e luminosidade, onde cultivamos espécies vegetais como possíveis fontes de alimento, e outras sem nenhum controle, tornando-as um ambiente estéril, quente e seco, onde a evolução é livre para ocorrer. Continuamos a aglomerar coletas aguardando reação ou uma emissão que a provoque.</p>
-            <br/><a href="#" class="cta-button-small">PDF</a>
-            <p style="font-size: 0.8rem;color:darkgray;max-width: 700px;"><i>"Fato à Ficção: Testamos NMN, Espermidina e Fisetina — compostos que prometem muito, mas entregam pouco. Sou o primeiro a buscar o 'Mato de Outro Mundo'. Quem sabe ainda terei 'Tempo' para compartilhar um terceiro livro!"</i></p>
-        </section>
+  <section class="books">
 
-        <div class="items-title">Minhas Narrativas Imaginativas</div>
+    <h2>Livros Publicados</h2>
 
-        <section class="item-section center">
-            <img src="images/foradacerca.jpg" class="image-left" style="width:230px;height:340px">
-            <p><b style="font-size: 1.5rem;">FORA DA CERCA</b><br/>Sete Contos da Roça<br/><br/>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br/><br/>É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
-            <p style="font-size: 0.8rem;color:darkgray;max-width: 400px; float:left;margin-top: 10px;">
-                <img src="images/playbooks.png" width="30px" style="margin-right: 10px;">
-                <img src="images/amazon.png" width="30px" style="margin-right: 10px;">
-                <img src="images/mercadolivre.png" width="40px" style="margin-right: 10px;">
-            </p>
-            <a href="#" class="cta-button-small" style="margin-top: 30px;">R$19,90 PDF / R$49,90 Presente</a>
-            <div style="display: inline-block;margin-top: 10px;">
-                <p style="width:100%;font-size: 0.8rem;color:darkgray;"><i>"Normalmente não leio minhas próprias matérias depois de publicadas, mas esse eu leio."</i></p>
-            </div>
-        </section>
-        <section class="item-section center">
-            <img src="images/ofuturomudou.jpg" class="image-left" style="width:230px;height:340px">
-            <p><b style="font-size: 1.5rem;">O FUTURO MUDOU</b><br/>Revelações da Inteligência Artificial<br/><br/>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber. Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
-            <p style="font-size: 0.8rem;color:darkgray;max-width: 400px; float:left;margin-top: 10px;">
-                <img src="images/playbooks.png" width="30px" style="margin-right: 10px;">
-                <img src="images/amazon.png" width="30px" style="margin-right: 10px;">
-                <img src="images/mercadolivre.png" width="40px" style="margin-right: 10px;">
-            </p>
-            <a href="#" class="cta-button-small" style="margin-top: 30px;">R$19,90 PDF / R$49,90 Presente</a>
-        </section>
+    <div class="book-row">
 
-        <div class="items-title">Meus Trabalhos de Programação</div>
-
-        <section class="item-section center" style="text-align: -webkit-center;">
-            <img src="images/wof1.png" style="max-width: 100%;" alt="Fall 2026"><br/><br/>
-            <p>Um jogo mobile de aventura e mistério fantasmagorico no estilo arcade em desenvolvimento para lançamento no inicio de 2026. </p>
-        </section>
-        <section class="item-section" style="text-align: -webkit-center;">
-            <b style="padding-top: 100px; opacity: 0.6;font-size: 1.3rem;">Status atual das minhas automatizações</b>
-            <div class="boxcontainer">
-                <div class="box-wrapper">
-                    <div class="box"></div>
-                    <div id="readings1" class="label">Leitura 1</div>  
-                </div>
-                <div class="box-wrapper">
-                    <div class="box"></div>
-                    <div id="readings2" class="label">Leitura 2</div>  
-                </div>
-                <div class="box-wrapper">
-                    <div class="box"></div>
-                    <div id="readings3" class="label">Leitura 3</div>  
-                </div>
-            </div><br/>
-            <div id="contents1" class="label" style="display: flex;">E1: Diversos</div>
-            <div id="contents2" class="label" style="display: flex;">E2: Cogumelos</div>
-            <div id="contents3" class="label" style="display: flex;">E3: Vazio</div><br/>
-            <div id="overall" class="label">Margem de 94% com a terceira série aguardando 188 dias de reatividade.</div>  
-        </section>
-
-        <div class="items-title">Minhas Produções em Saúde</div>
-
-        <section class="item-section" style="text-align: -webkit-center;">
-            <img src="images/logo-banner.jpg" alt="logo-banner" style="max-width: 300px;"><br/><br/>
-            <!-- <p style="text-transform: uppercase;">Brevemente, iniciaremos atividades em colônias sem tolerância a poluentes atmosféricos. Prepare-se:</p> -->
-            <div class="products-grid">
-                <div  class="product-card">
-                    <div class="product-image">
-                        <img src="images/Amber Cast.jpg" alt="Amber Cast">
-                    </div>
-                    <div class="product-desc">
-                        <b>AMBER CAST</b><br/>
-                        <small>
-                        Um líquido programado para proporcionar uma experiência perduravel de Tabaco e 
-                        Caramelo com notas exclusivas em uma combinação rica e encorpada. Sua fórmula é projetada para manter 
-                        a satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/Black Malt.jpg" alt="Black Malt">
-                    </div>
-                    <div class="product-desc">
-                        <b>BLACK MALT</b><br/>
-                        <small>
-                        Resultado do processo de maturação em um líquido intenso com notas de raizes e nozes 
-                        em uma combinação forte e encorpada. Sua fórmula exclusivas é projetada para manter satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/Double Dry.jpg" alt="Double Dry">
-                    </div>
-                    <div class="product-desc">
-                        <b>DOUBLE DRY</b><br/>
-                        <small>
-                        Resultado do processo de maturação em um líquido intenso com notas de raizes e nozes 
-                        em uma combinação forte e encorpada. Sua fórmula exclusivas é projetada para manter satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/Castle Hall.jpg" alt="Castle Hall">
-                    </div>
-                    <div class="product-desc">
-                        <b>CASTLE HALL</b><br/>
-                        <small>
-                        Resultado do processo de maturação em um líquido intenso com notas de raizes e nozes 
-                        em uma combinação forte e encorpada. Sua fórmula exclusivas é projetada para manter satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                    <img src="images/Hi-Vanilin.jpg" alt="Hi-Vanilin">
-                    </div>
-                    <div class="product-desc">
-                        <b>HI-VANILIN</b><br/>
-                        <small>
-                        Resultado do processo de maturação em um líquido intenso com notas de raizes e nozes 
-                        em uma combinação forte e encorpada. Sua fórmula exclusivas é projetada para manter satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                    <img src="images/Royal Crown.jpg" alt="Royal Crown">
-                    </div>
-                    <div class="product-desc">
-                        <b>ROYAL CROWN</b><br/>
-                        <small>
-                        Resultado do processo de maturação em um líquido intenso com notas de raizes e nozes 
-                        em uma combinação forte e encorpada. Sua fórmula exclusivas é projetada para manter satisfação sem tabaco.
-                        </small>
-                    </div>
-                </div>
-            </div><br/>
-            <figure>
-                <p style="text-transform: uppercase;">Venda sob prescrição médica. Consulte nossa equipe para tratamento destinado à cessação do uso excessivo de cigarros.</p>
-            </figure>
-        </section>
-
-        <div class="items-title" style="font-size:12px;text-align: center;margin-top:-30px;">
-            <p>Curiosidade Científica: Esse é o meio usado pelo CELOBI-1 para transporte de substâncias bioativas como Flavonoides, Catequinas, Carotenoides, Polifenóis e o Ômega‑3!</p>
+      <div class="book-card">
+        <img src="images/foradacerca.jpg" alt="The Silent Horizon cover" class="book-cover">
+        <div class="book-info">
+          <h3>Fora da Cerca</h3>
+          <h4>Sete Contos da Roça</h4>
+          <p>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br/><br/>É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
+          <a href="#">Purchase</a>
         </div>
-        
+      </div>
+
+      <div class="book-card new">
+        <span class="badge">New</span>
+        <img src="images/ofuturomudou.jpg" alt="Echoes of Tomorrow cover" class="book-cover">
+        <div class="book-info">
+          <h3>O Futuro Mudou</h3>
+          <h4>Revelações da Inteligência Artificial</h4>
+          <p>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber.<br/><br/>Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+
     </div>
 
-    <br />
+  </section>
 
-    <!-- Site Map -->
-    <footer>
-        <ul class="site-map">
-            <li><a href="#home">Home</a></li>
-            <li><a href="https://www.foradacerca.com.br">Fora da Cerca</a></li>
-            <li><a href="#books">O Futuro Mudou</a></li>
-            <li><a href="#books">Pxx-xxxxxs</a></li>
-            <li><a href="#books">Ixx-xxxxn</a></li>
-            <li><a href="https://www.dragonvape.com.br">DragonVape</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </footer>
+  <section class="upcoming">
 
-    <script src="js/starfield.js" defer></script>
-    <script src="js/holoborder.js" defer></script>
+    <h2>Lançamento em breve...</h2>
+
+    <div class="book-card upcoming-card">
+      <img src="images/corredoresdosubmundo.jpg" alt="The Silent Horizon cover" class="book-cover">
+      <div class="book-info">
+        <h3>Corredores do Submundo</h3>
+        <h4>A Vida Após Exaustão da Crosta</h4>
+        <p>O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais, sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br/><br/>Mas as crianças viam o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se seguiram nos Corredores do Submundo.</p>
+        <div class="links">
+          <a href="#">Pre-order on Amazon</a>
+          <a href="#">Pre-order on Barnes & Noble</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="side-project">
+    <h2>Outros Projetos</h2>
+    <div class="app-row">
+      <!-- First project -->
+      <div class="app-card">
+        <img src="images/wof1.png" alt="App screenshot" class="app-image">
+        <div class="app-info">
+          <h3>Mindful Journeys</h3>
+          <p>A companion app designed to help readers track reflections, set reading goals, and explore bonus content related to my books.</p>
+          <div class="download-links">
+            <a href="#">Get it on Google Play</a>
+          </div>
+        </div>
+      </div>
+      <!-- Second project -->
+      <div class="app-card">
+        <img src="images/wof1.png" alt="Second app screenshot" class="app-image">
+        <div class="app-info">
+          <h3>StoryNotes</h3>
+          <p>An app for jotting down quick thoughts, quotes, and inspirations while reading — syncs seamlessly with your library.</p>
+          <div class="download-links">
+            <a href="#">Get it on Google Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="side-project">
+    <div class="app-row">
+      <!-- First project -->
+      <div class="app-card">
+        <img src="images/dvbanner.jpg" alt="App screenshot" class="app-image">
+        <div class="image-row">
+          <img src="images/dragonvape/Amber Cast.jpg" alt="Amber Cast">
+          <img src="images/dragonvape/Black Malt.jpg" alt="Black Malt">
+          <img src="images/dragonvape/Castle Hall.jpg" alt="Castle Hall">
+          <img src="images/dragonvape/Double Dry.jpg" alt="Double Dry">
+          <img src="images/dragonvape/Hi-Vanilin.jpg" alt="Hi-Vanilin">
+          <img src="images/dragonvape/Royal Crown.jpg" alt="Royal Crown">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 A. C. SPACCA - Todos os Direitos Reservados.</p>
+    <p>Follow on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+  </footer>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Declaração de Missão de Pesquisa</h2>
+      <p>
+      <h4>No CELOBI – Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
+      A missão possui três objetivos interconectados:<br/><br/>
+      ● <b>Astrobiologia e Panspermia:</b> Investigar material análogo à panspermia para compreender sua resiliência e potencial atividade biológica.<br/><br/>
+      ● <b>Engenharia Estéril Subterrânea:</b> Desenvolver um sistema subterrâneo totalmente automatizado de incubação para cultivar material análogo extraterrestre sem contaminação terrestre.<br/><br/>
+      ● <b>Senescência e Saúde Humana:</b> Identificar substâncias bioativas exógenas capazes de eliminar células senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a medicina regenerativa.<br/><br/>
+      Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá‑lo de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.
+      </p>
+    </div>
+  </div>
+
+  <script src="starfield.js" defer></script>
+  <script src="modalscreens.js" defer></script>
 
 </body>
 </html>
