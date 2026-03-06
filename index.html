@@ -1,149 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Author Showcase</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. C. SPACCA Showcase</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
+    <header>
+        <canvas id="starfield"></canvas>
+        <div class="header-content">
+            <h1>A. C. SPACCA</h1>
+            <p>...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
+        </div>
+        <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" id="aboutBtn">
+    </header>
 
-    <canvas id="starfield"></canvas>
+    <section class="books">
 
-    <div class="header-content">
-      <h1>A. C. SPACCA</h1>
-      <p>...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
+        <h2>Livros Publicados</h2>
+
+        <div class="book-row">
+
+            <div class="book-card">
+                <img src="images/foradacerca.jpg" alt="The Silent Horizon cover" class="book-cover">
+                <div class="book-info">
+                    <h3>Fora da Cerca</h3>
+                    <h4>Sete Contos da Roça</h4>
+                    <p>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios
+                    e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida
+                    e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em
+                    acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é
+                    pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se
+                    esbaldar!".</p>
+                    <div class="purchase-links">
+                        <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
+                        <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card new">
+                <span class="badge">New</span>
+                <img src="images/ofuturomudou.jpg" alt="Echoes of Tomorrow cover" class="book-cover">
+                <div class="book-info">
+                    <h3>O Futuro Mudou</h3>
+                    <h4>Revelações da Inteligência Artificial</h4>
+                    <p>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da
+                    inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas
+                    assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras
+                    desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo
+                    talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São
+                    revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+                    <div class="purchase-links">
+                        <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
+                        <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="#"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="upcoming">
+
+        <h2>Lançamento em breve...</h2>
+
+        <div class="book-card upcoming-card">
+            <img src="images/corredoresdosubmundo.jpg" alt="The Silent Horizon cover" class="book-cover">
+            <div class="book-info">
+                <h3>Corredores do Submundo</h3>
+                <h4>A Vida Após Exaustão da Crosta</h4>
+                <p>O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o
+                    planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais,
+                    sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br /><br />Mas as crianças viam
+                    o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se
+                    tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se
+                    seguiram nos Corredores do Submundo.</p>
+                <div class="links">
+                    <a href="#">Pre-order on Amazon</a>
+                    <a href="#">Pre-order on Barnes & Noble</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="side-project">
+        <h2>Outros Projetos</h2>
+        <div class="app-row">
+            <!-- First project -->
+            <div class="app-card">
+                <img src="images/wof1.png" alt="App screenshot" class="app-image">
+                <div class="app-info">
+                    <h3>XXX-XXXXXX</h3>
+                    <p>Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo arcade dos anos 70 em
+                        desenvolvimento para lançamento no inicio de 2026.</p>
+                    <div class="download-links">
+                        <a href="#">Get it on Google Play</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Second project -->
+            <div class="app-card">
+                <div class="app-info">
+                    <h3>Status Atual de Automatizações</h3>
+                    <div class="" class="label">Superficie</div>
+                    <div class="" id="readings1" class="label">Leitura 1</div>
+                    <div class="" class="label">Subsuperficie Esteril</div>
+                    <div class="" id="readings2" class="label">Leitura 2</div>
+                    <div class="" class="label">Subsuperficie Esteril sem Climatização</div>
+                    <div class="" id="readings3" class="label">Leitura 3</div>
+                    <div class="" id="overall" class="label">Margem de 94% com a terceira série aguardando <b
+                            id="ttl">188</b> dias de reatividade.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="side-project">
+        <div class="app-row">
+            <!-- First project -->
+            <div class="app-card">
+                <img src="images/dvbanner.jpg" alt="App screenshot" class="app-image">
+                <div class="image-row">
+                    <img src="images/Amber Cast.jpg" alt="Amber Cast">
+                    <img src="images/Black Malt.jpg" alt="Black Malt">
+                    <img src="images/Castle Hall.jpg" alt="Castle Hall">
+                    <img src="images/Double Dry.jpg" alt="Double Dry">
+                    <img src="images/Hi-Vanilin.jpg" alt="Hi-Vanilin">
+                    <img src="images/Royal Crown.jpg" alt="Royal Crown">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 A. C. SPACCA - Todos os Direitos Reservados.</p>
+        <p>Follow on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+    </footer>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Declaração de Missão de Pesquisa</h2>
+            <p>
+            <h4>No CELOBI – Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a
+                fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
+            A missão possui três objetivos interconectados:<br /><br />
+            ● <b>Astrobiologia e Panspermia:</b> Investigar material análogo à panspermia para compreender sua
+            resiliência e potencial atividade biológica.<br /><br />
+            ● <b>Engenharia Estéril Subterrânea:</b> Desenvolver um sistema subterrâneo totalmente automatizado de
+            incubação para cultivar material análogo extraterrestre sem contaminação da biosfera da
+            subsuperficie.<br /><br />
+            ● <b>Senescência e Saúde Humana:</b> Identificar substâncias bioativas exógenas capazes de eliminar células
+            senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a
+            medicina regenerativa.<br /><br />
+            Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo de forma aberta, o
+            CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.
+            </p>
+        </div>
     </div>
 
-    <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" id="aboutBtn">
-
-  </header>
-
-    
-
-  <section class="books">
-
-    <h2>Livros Publicados</h2>
-
-    <div class="book-row">
-
-      <div class="book-card">
-        <img src="images/foradacerca.jpg" alt="The Silent Horizon cover" class="book-cover">
-        <div class="book-info">
-          <h3>Fora da Cerca</h3>
-          <h4>Sete Contos da Roça</h4>
-          <p>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br/><br/>É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
-          <a href="#">Purchase</a>
-        </div>
-      </div>
-
-      <div class="book-card new">
-        <span class="badge">New</span>
-        <img src="images/ofuturomudou.jpg" alt="Echoes of Tomorrow cover" class="book-cover">
-        <div class="book-info">
-          <h3>O Futuro Mudou</h3>
-          <h4>Revelações da Inteligência Artificial</h4>
-          <p>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber.<br/><br/>Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
-          <a href="#">Purchase</a>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="upcoming">
-
-    <h2>Lançamento em breve...</h2>
-
-    <div class="book-card upcoming-card">
-      <img src="images/corredoresdosubmundo.jpg" alt="The Silent Horizon cover" class="book-cover">
-      <div class="book-info">
-        <h3>Corredores do Submundo</h3>
-        <h4>A Vida Após Exaustão da Crosta</h4>
-        <p>O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais, sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br/><br/>Mas as crianças viam o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se seguiram nos Corredores do Submundo.</p>
-        <div class="links">
-          <a href="#">Pre-order on Amazon</a>
-          <a href="#">Pre-order on Barnes & Noble</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="side-project">
-    <h2>Outros Projetos</h2>
-    <div class="app-row">
-      <!-- First project -->
-      <div class="app-card">
-        <img src="images/wof1.png" alt="App screenshot" class="app-image">
-        <div class="app-info">
-          <h3>XXX-XXXXXX</h3>
-          <p>Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo arcade dos anos 70 em desenvolvimento para lançamento no inicio de 2026.</p>
-          <div class="download-links">
-            <a href="#">Get it on Google Play</a>
-          </div>
-        </div>
-      </div>
-      <!-- Second project -->
-      <div class="app-card">
-        <div class="app-info">
-            <h3>Status Atual de Automatizações</h3>
-            <div class="" class="label">Superficie</div>
-            <div class="" id="readings1" class="label">Leitura 1</div>
-            <div class="" class="label">Subsuperficie Esteril</div>
-            <div class="" id="readings2" class="label">Leitura 2</div>
-            <div class="" class="label">Subsuperficie Esteril sem Climatização</div>
-            <div class="" id="readings3" class="label">Leitura 3</div>
-            <div class="" id="overall" class="label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b> dias de reatividade.</div>  
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="side-project">
-    <div class="app-row">
-      <!-- First project -->
-      <div class="app-card">
-        <img src="images/dvbanner.jpg" alt="App screenshot" class="app-image">
-        <div class="image-row">
-          <img src="images/Amber Cast.jpg" alt="Amber Cast">
-          <img src="images/Black Malt.jpg" alt="Black Malt">
-          <img src="images/Castle Hall.jpg" alt="Castle Hall">
-          <img src="images/Double Dry.jpg" alt="Double Dry">
-          <img src="images/Hi-Vanilin.jpg" alt="Hi-Vanilin">
-          <img src="images/Royal Crown.jpg" alt="Royal Crown">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 A. C. SPACCA - Todos os Direitos Reservados.</p>
-    <p>Follow on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
-  </footer>
-
-  <!-- About Modal -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Declaração de Missão de Pesquisa</h2>
-      <p>
-      <h4>No CELOBI – Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
-      A missão possui três objetivos interconectados:<br/><br/>
-      ● <b>Astrobiologia e Panspermia:</b> Investigar material análogo à panspermia para compreender sua resiliência e potencial atividade biológica.<br/><br/>
-      ● <b>Engenharia Estéril Subterrânea:</b> Desenvolver um sistema subterrâneo totalmente automatizado de incubação para cultivar material análogo extraterrestre sem contaminação da biosfera da subsuperficie.<br/><br/>
-      ● <b>Senescência e Saúde Humana:</b> Identificar substâncias bioativas exógenas capazes de eliminar células senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a medicina regenerativa.<br/><br/>
-      Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.
-      </p>
-    </div>
-  </div>
-
-  <script src="js/starfield.js" defer></script>
-  <script src="js/modalscreens.js" defer></script>
-  <script src="js/holoborder.js" defer></script>
+    <script src="js/starfield.js" defer></script>
+    <script src="js/modalscreens.js" defer></script>
+    <script src="js/holoborder.js" defer></script>
 
 </body>
+
 </html>
