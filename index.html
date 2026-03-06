@@ -19,6 +19,19 @@
         <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" id="aboutBtn">
     </header>
 
+    <div class="notice-bar">
+        <p>This site has not been promoted yet and is under construction - Come back soon!</p>
+    </div>
+
+
+    <div class="lang-switch">
+        <img src="images/br_flag.png" alt="Português" id="ptBtn">
+        <img src="images/us_flag.png" alt="English" id="enBtn">
+    </div>
+
+    <!-- Google Translate element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
     <section class="books">
 
         <h2>Livros Publicados</h2>
@@ -31,15 +44,16 @@
                     <h3>Fora da Cerca</h3>
                     <h4>Sete Contos da Roça</h4>
                     <p>Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios
-                    e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida
-                    e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em
-                    acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é
-                    pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se
-                    esbaldar!".</p>
+                        e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida
+                        e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em
+                        acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é
+                        pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se
+                        esbaldar!".</p>
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
-                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img
+                                src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
                 </div>
             </div>
@@ -51,11 +65,11 @@
                     <h3>O Futuro Mudou</h3>
                     <h4>Revelações da Inteligência Artificial</h4>
                     <p>Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da
-                    inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas
-                    assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras
-                    desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo
-                    talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São
-                    revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+                        inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas
+                        assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras
+                        desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo
+                        talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São
+                        revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="#"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
@@ -169,9 +183,34 @@
         </div>
     </div>
 
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <script src="js/starfield.js" defer></script>
     <script src="js/modalscreens.js" defer></script>
     <script src="js/holoborder.js" defer></script>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        document.getElementById("ptBtn").onclick = function () {
+            alert("Tradução para Português ativada!");
+            const select = document.querySelector(".goog-te-combo");
+            if (select) { select.value = "pt"; select.dispatchEvent(new Event("change")); }
+        };
+
+        document.getElementById("enBtn").onclick = function () {
+            alert("English translation activated!");
+            const select = document.querySelector(".goog-te-combo");
+            if (select) { select.value = "en"; select.dispatchEvent(new Event("change")); }
+        };
+
+    </script>
 
 </body>
 

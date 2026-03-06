@@ -258,6 +258,20 @@ footer a:hover {
     cursor: pointer;
 }
 
+.notice-bar {
+  background: #e5e7eb; /* light gray */
+  color: #1e3a8a;      /* your blue accent */
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.notice-bar p {
+  margin: 0;
+  font-style: italic;
+}
+
 .side-project {
     padding: 2rem;
     background: #eef2ff;
@@ -309,7 +323,9 @@ footer a:hover {
 }
 
 .purchase-links a {
-  display: inline-block;  /* prevents full-width stretching */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
   flex: 0 0 auto;         /* don’t grow to fill */
   background: #1e3a8a;
   color: white;
@@ -360,6 +376,31 @@ footer a:hover {
     text-align: center;
 }
 
+.holo-border {
+    border: 3px solid;
+    border-radius: 20px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #8ea2c966, #3b608b99, #0000ff99, #bfe8ff66, #679ddb99);
+    animation: dash 1.3s ease infinite;
+}
+@keyframes dash {
+  to { border-image-source: linear-gradient(45deg, #8ea2c999, #3b608b99, #0000ff99, #bfe8ff99, #679ddb99); }
+}
+
+.lang-switch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-switch img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
 /* Responsive tweaks */
 @media (min-width: 768px) {
 
@@ -404,8 +445,13 @@ footer a:hover {
     }
 
     .purchase-links {
-    flex-direction: column;
-    align-items: stretch;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .purchase-links a {
+        display: inline-block;  /* prevents full-width stretching */
+        text-align: right;
+        margin-top: 0px;
     }
 
 }

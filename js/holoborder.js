@@ -53,7 +53,7 @@ function updateGradient() {
     const colorA = interpolateColor(startColors[0], endColors[0], factor);
     const colorB = interpolateColor(startColors[1], endColors[1], factor);
 
-    holoImage.style.borderImage = `linear-gradient(45deg, ${colorA}, ${colorB}) 1`;
+    //holoImage.style.borderImage = `linear-gradient(45deg, ${colorA}, ${colorB}) 1`;
 
     step += direction;
     if (step > totalSteps || step < 0) {
@@ -64,5 +64,5 @@ function updateGradient() {
 
 // Initialize
 simulateDay();
-updateGradient();
+//updateGradient();
 
