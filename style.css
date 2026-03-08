@@ -404,7 +404,7 @@ footer a:hover {
 }
 
 .lang-switch img {
-  width: 30px;
+  width: 20px;
   height: auto;
   cursor: pointer;
   z-index: 1002;
@@ -463,4 +463,7 @@ footer a:hover {
         margin-top: 0px;
     }
 
+    .lang-switch img {
+        width: 30px;
+    }
 }
