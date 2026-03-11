@@ -1,0 +1,260 @@
+.participate-header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #004466;
+  color: #fff;
+}
+
+.participate-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.participate-header p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Map section */
+.participate-map {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e6f2f5;
+}
+
+.participate-map h2 {
+  margin-bottom: 1rem;
+}
+
+#map {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.map-container {
+  position: relative;
+  display: inline-block;
+}
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-point {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  display: none;
+  z-index: 100;
+}
+
+.number-icon .circle {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  font-size: 10px;
+  --font-weight: bold;
+  text-align: center;
+  border: 1px solid rgb(167, 167, 167); /* optional border */
+}
+
+.number-icon .circle.selected {
+  border: 2px solid red; /* highlight selected city */
+}
+
+/* Feed section */
+.participate-feed {
+  padding: 2rem;
+}
+
+.participate-feed h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.group-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.group-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  max-width: 170px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.group-card:hover {
+  background-color: #f0f0f0;
+  border-color: #004466;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.group-card h3 {
+  margin: 0;
+  color: #004466;
+}
+
+.group-card p {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+.participate-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #004466;
+  color: #fff;
+}
+
+/* Registration row below map */
+.register-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.register-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  min-width: 180px;
+}
+
+.register-select:focus {
+  outline: none;
+  border-color: #004466;
+  box-shadow: 0 0 4px rgba(0, 68, 102, 0.4);
+}
+
+.register-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #004466;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.register-button:hover {
+  background-color: #006699;
+}
+
+/* Modal background overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal box */
+.modal-content {
+  background-color: #fff;
+  width: 80%; /* 80% of screen width */
+  height: 60%; /* 80% of screen height */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Header bar */
+.modal-header {
+  background-color: #004466;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #fff;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Content area */
+.modal-body {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Controls bar */
+.modal-controls {
+  padding: 1rem;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.modal-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #004466;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-btn:hover {
+  background-color: #006699;
+}
+
+.leaflet-interactive:focus {
+  outline: none;
+}

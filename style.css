@@ -248,6 +248,20 @@ footer a:hover {
     position: relative;
 }
 
+.button a {
+    text-decoration: none;
+    background: #c7c7c9;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.button a:hover {
+    background: #3b82f6;
+}
+
 /* Close button */
 .close {
     position: absolute;

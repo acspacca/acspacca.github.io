@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Participate</title>
+    <!-- Link to your existing stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="senescent.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <canvas id="starfield"></canvas>
+        <div class="header-content">
+            <h1>Participate</h1>
+            <p>Add your expertise in Technology, Science, or Construction. When three specialists in the same area
+                unite, a group is formed. Everyone can then follow their progress right here.</p>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <section class="participate-map">
+        <h2>Global Locations Suitable for Space Launch Permits</h2>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <div id="status-bar" style="padding:6px; background:#f0f0f0; font-family:sans-serif;">Not on Map? Notify Our
+            Team!</div>
+        <!-- Registration Row -->
+        <div class="register-row">
+            <select id="city-select" class="register-select">
+                <option selected disabled>Choose Location</option>
+            </select>
+            <select class="register-select">
+                <option selected disabled>Choose Specialty</option>
+                <option>Technology</option>
+                <option>Science</option>
+                <option>Construction</option>
+            </select>
+            <button class="register-button">Register</button>
+        </div>
+    </section>
+
+    <!-- Active Groups Feed -->
+    <section class="participate-feed">
+        <h2>Active Groups</h2>
+        <div class="group-feed">
+            <!-- Example group card -->
+            <div class="group-card">
+                <h3>São Paulo</h3>
+                <p>Status: Prototype deployed</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <div class="group-card" data-group="São Paulo">
+                <h3>Rio de Janeiro</h3>
+                <p>Status: Experiment underway</p>
+            </div>
+            <!-- More groups will appear here dynamically -->
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="participate-modal" class="modal">
+        <div class="modal-content">
+            <!-- Header Bar -->
+            <div class="modal-header">
+                <h2>Group Details</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+
+            <!-- Content Area -->
+            <div class="modal-body">
+                <p>This is where group information, progress updates, or instructions will appear.</p>
+            </div>
+
+            <!-- Controls Bar -->
+            <div class="modal-controls"></div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="participate-footer">
+        <p>Stay tuned as new groups form and share their progress.</p>
+    </footer>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/starfield.js" defer></script>
+
+    <script>
+
+        const modal = document.getElementById('participate-modal');
+        const modalBody = modal.querySelector('.modal-body');
+        const closeButtons = modal.querySelectorAll('.modal-close');
+
+        // Attach click event to each group-card
+        document.querySelectorAll('.group-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const groupName = card.getAttribute('data-group');
+                const groupContent = card.innerHTML;
+
+                // Update modal body with card content
+                modalBody.innerHTML = `<h3>${groupName} Group</h3>` + groupContent;
+
+                // Show modal
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modal when clicking close buttons
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        });
+
+        // Close modal when clicking outside content
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        var markerId = 0;
+        const tooltip = document.getElementById('tooltip');
+        const select = document.getElementById('city-select');
+        const markers = {};
+        const map = L.map('map', {
+            center: [20, 16],   // global center
+            zoom: 2.2,           // zoom level
+            zoomControl: false, // remove zoom buttons
+            dragging: false,    // disable dragging
+            scrollWheelZoom: false, // disable scroll zoom
+            doubleClickZoom: false, // disable double-click zoom
+            boxZoom: false,         // disable box zoom
+            keyboard: false         // disable keyboard navigation
+        });
+        const cities = [
+            { name: "Cape Canaveral", coords: [28.39, -80.60], reason: "NASA Kennedy Space Center and Cape Canaveral Space Force Station, coastal site near Orlando, main U.S. orbital hub" },
+            { name: "Wallops Island", coords: [37.85, -75.48], reason: "NASA Wallops Flight Facility, rural barrier island near Washington D.C., used for small orbital and sounding rockets" },
+            { name: "Mojave", coords: [35.05, -118.17], reason: "Mojave Air & Space Port, near Los Angeles, licensed for experimental and commercial spaceplanes" },
+            { name: "Kodiak", coords: [57.79, -152.41], reason: "Pacific Spaceport Complex, remote Alaskan site near Anchorage, ideal for polar launches" },
+            { name: "Truth or Consequences", coords: [33.13, -107.25], reason: "Spaceport America, desert site near Albuquerque, Virgin Galactic suborbital flights" },
+            { name: "Corn Ranch", coords: [31.42, -104.76], reason: "Blue Origin’s private launch site in rural Texas near El Paso" },
+            { name: "Cecil Field", coords: [30.22, -81.88], reason: "Jacksonville-based spaceport for horizontal launches" },
+            { name: "Colorado Air & Space Port", coords: [39.74, -104.62], reason: "Near Denver, licensed for horizontal launches and aerospace testing" },
+
+            // Brazil
+            { name: "Alcântara", coords: [-2.37, -44.40], reason: "Equatorial coastal site near São Luís, Brazil’s main orbital launch center" },
+            { name: "Barreira do Inferno", coords: [-5.91, -35.18], reason: "Historic Brazilian launch site near Natal, used for sounding rockets" },
+
+            // Europe
+            { name: "Kourou", coords: [5.16, -52.64], reason: "Guiana Space Centre in French Guiana, equatorial advantage, Europe’s main launch site" },
+            { name: "Esrange", coords: [67.89, 21.10], reason: "Sweden’s Arctic site near Kiruna, used for sounding rockets and expanding orbital launches" },
+            { name: "Andøya", coords: [69.30, 16.02], reason: "Norway’s rural island site near Tromsø, expanding into orbital launches" },
+            { name: "SaxaVord", coords: [60.74, -1.00], reason: "UK’s Shetland Islands site, rural but strategic for polar launches" },
+            { name: "Canso", coords: [45.34, -60.99], reason: "Nova Scotia site in Canada, Maritime Launch Services developing orbital capacity" },
+
+            // Russia & CIS
+            { name: "Baikonur", coords: [45.62, 63.32], reason: "Historic Soviet and Russian launch site in Kazakhstan, near Kyzylorda" },
+            { name: "Plesetsk", coords: [62.93, 40.57], reason: "Northern Russian site for military and commercial launches" },
+            { name: "Vostochny", coords: [51.88, 128.33], reason: "Modern Russian cosmodrome in Amur region, rural but strategic" },
+            { name: "Svobodny", coords: [51.40, 128.12], reason: "Former Russian launch site near Blagoveshchensk, rural location" },
+
+            // Asia
+            { name: "Wenchang", coords: [19.61, 110.75], reason: "China’s coastal site on Hainan Island, equatorial advantage for heavy launches" },
+            { name: "Jiuquan", coords: [40.96, 100.29], reason: "China’s inland desert site near Jiayuguan, used for crewed missions" },
+            { name: "Xichang", coords: [28.25, 102.02], reason: "China’s southwestern site, rural mountainous terrain for geostationary launches" },
+            { name: "Tanegashima", coords: [30.40, 130.97], reason: "Japan’s main orbital launch site near Kagoshima, coastal rural island" },
+            { name: "Uchinoura", coords: [31.25, 131.08], reason: "Japan’s smaller site for scientific missions, rural coastal location" },
+            { name: "Satish Dhawan", coords: [13.73, 80.23], reason: "India’s Sriharikota site near Chennai, equatorial island base for ISRO" },
+            { name: "Palmachim", coords: [31.88, 34.69], reason: "Israel’s coastal airbase near Tel Aviv, used for satellite launches" },
+
+            // Africa
+            { name: "Malindi", coords: [-3.22, 40.12], reason: "Kenya’s coastal site near Mombasa, San Marco platform for equatorial launches" },
+            { name: "Hammaguir", coords: [30.77, -3.06], reason: "Historic French launch site in Algeria’s desert, rural and isolated" },
+
+            // Oceania
+            { name: "Mahia", coords: [-39.32, 177.88], reason: "New Zealand’s rural peninsula, Rocket Lab’s orbital launch site" },
+            { name: "Gove", coords: [-12.19, 136.77], reason: "Australia’s Arnhem Space Centre near Darwin, equatorial advantage" },
+            { name: "Whalers Way", coords: [-34.87, 135.70], reason: "South Australia’s rural coastal site under development for orbital launches" }
+        ];
+        var metropolises = [
+            // Americas
+            { name: "New York", coords: [40.7128, -74.0060] },
+            { name: "Los Angeles", coords: [34.0522, -118.2437] },
+            { name: "São Paulo", coords: [-23.5505, -46.6333] },
+            { name: "Mexico City", coords: [19.4326, -99.1332] },
+            { name: "Buenos Aires", coords: [-34.6037, -58.3816] },
+            { name: "Toronto", coords: [43.6511, -79.3839] },
+            { name: "Chicago", coords: [41.8781, -87.6298] },
+            { name: "Rio de Janeiro", coords: [-22.9068, -43.1729] },
+
+            // Europe
+            { name: "London", coords: [51.5074, -0.1278] },
+            { name: "Paris", coords: [48.8566, 2.3522] },
+            { name: "Moscow", coords: [55.7558, 37.6173] },
+            { name: "Berlin", coords: [52.5200, 13.4050] },
+            { name: "Madrid", coords: [40.4168, -3.7038] },
+            { name: "Rome", coords: [41.9028, 12.4964] },
+            { name: "Istanbul", coords: [41.0082, 28.9784] },
+
+            // Asia
+            { name: "Tokyo", coords: [35.6895, 139.6917] },
+            { name: "Shanghai", coords: [31.2304, 121.4737] },
+            { name: "Beijing", coords: [39.9042, 116.4074] },
+            { name: "Mumbai", coords: [19.0760, 72.8777] },
+            { name: "Delhi", coords: [28.7041, 77.1025] },
+            { name: "Seoul", coords: [37.5665, 126.9780] },
+            { name: "Bangkok", coords: [13.7563, 100.5018] },
+            { name: "Jakarta", coords: [-6.2088, 106.8456] },
+
+            // Middle East
+            { name: "Dubai", coords: [25.2048, 55.2708] },
+            { name: "Riyadh", coords: [24.7136, 46.6753] },
+            { name: "Tehran", coords: [35.6892, 51.3890] },
+
+            // Africa
+            { name: "Cairo", coords: [30.0444, 31.2357] },
+            { name: "Lagos", coords: [6.5244, 3.3792] },
+            { name: "Johannesburg", coords: [-26.2041, 28.0473] },
+            { name: "Nairobi", coords: [-1.2921, 36.8219] },
+
+            // Oceania
+            { name: "Sydney", coords: [-33.8688, 151.2093] },
+            { name: "Melbourne", coords: [-37.8136, 144.9631] },
+            { name: "Auckland", coords: [-36.8485, 174.7633] }
+        ];
+
+        //Sort by Longitude (west to east)
+        cities.sort((a, b) => a.coords[1] - b.coords[1]);
+        metropolises.sort((a, b) => a.coords[1] - b.coords[1]);
+
+        // Add tile layer (blue continents on white background)
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '<a href="index.html">Centro de Estudos em Logística Biológica</a>' }).addTo(map);
+
+        // Draw numbered markers
+        cities.forEach(city => {
+            // Circle shows the ID number only
+            markerId++;
+            city.id = markerId; // assign incremental ID to city
+            const numberIcon = L.divIcon({
+                className: 'number-icon',
+                html: `<div class="circle">${markerId}</div>`,
+                iconSize: [14, 14],
+                iconAnchor: [8, 8]
+            });
+
+            const marker = L.marker(city.coords, { icon: numberIcon })
+                .addTo(map)
+                .bindTooltip(city.name, { permanent: false, direction: "top" })
+            markers[city.name] = marker; // key by city name
+
+            // Add city to dropdown
+            const option = document.createElement('option');
+            option.value = city.name;
+            option.textContent = markerId.toString() + ' - ' + city.name;
+            select.appendChild(option);
+
+            // Clicking marker updates dropdown
+            marker.on('click', () => {
+                select.value = city.name;
+                select.dispatchEvent(new Event('change'));
+            });
+        });
+
+        metropolises.forEach(function (city) {
+            L.circleMarker(city.coords, {
+                radius: 3,
+                color: "black",
+                fillColor: "black",
+                fillOpacity: 1,
+                weight: 0, 
+            })
+            .addTo(map)
+            .bindTooltip(city.name, { permanent: false, direction: "top" });
+        });
+
+        // Dropdown change handler
+        select.addEventListener('change', e => {
+            const selectedCity = e.target.value;
+
+            // Reset all markers to blue border
+            Object.entries(markers).forEach(([name, m]) => {
+                const cityObj = cities.find(c => c.name === name);
+                m.setIcon(L.divIcon({
+                    className: 'number-icon',
+                    html: `<div class="circle">${cityObj.id}</div>`,
+                    iconSize: [14, 14],
+                    iconAnchor: [8, 8]
+                }));
+            });
+
+            // Highlight selected marker with red border
+            const selectedMarker = markers[selectedCity];
+            const cityObj = cities.find(c => c.name === selectedCity);
+            selectedMarker.setIcon(L.divIcon({
+                className: 'number-icon',
+                html: `<div class="circle selected">${cityObj.id}</div>`,
+                iconSize: [14, 14],
+                iconAnchor: [8, 8]
+            }));
+
+            // Update status bar
+            document.getElementById('status-bar').textContent = `${cityObj.name} ${cityObj.reason}`;
+
+        });
+
+    </script>
+
+</body>
+
+</html>
