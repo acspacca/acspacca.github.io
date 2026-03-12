@@ -19,13 +19,16 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: hue-rotate(0deg);
-    transition: filter 1s linear;
 }
 
 .lab-front{
     background: linear-gradient(160deg, #000000, #001f3f, #003366, #004080);
     background: linear-gradient(160deg, #001f3f, #003366, #004080);
+}
+
+.hue-effect {
+    filter: hue-rotate(0deg);
+    transition: filter 1s linear;
 }
 
 #starfield {
@@ -475,7 +478,7 @@ footer a:hover {
     }
 
     .app-image {
-        width: 160px;
+        width: 200px;
         margin-right: 1.5rem;
     }
 

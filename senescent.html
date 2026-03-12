@@ -360,11 +360,13 @@
         showLanguage('en');        
 
         let hue = 0;
-        const header = document.querySelector('.back-logo');
+        const hueClass = document.querySelectorAll('.back-logo');
 
         function animateHue() {
             hue = (hue + 1) % 360; // cycle through 0–359 degrees
-            header.style.filter = `hue-rotate(${hue}deg) invert(70%)`;
+            hueClass.forEach(control => {
+                control.style.filter = `hue-rotate(${hue}deg) invert(70%)`;
+            });
             requestAnimationFrame(animateHue); // smooth animation loop
         }
 

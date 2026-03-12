@@ -63,15 +63,25 @@ function updateGradient() {
 }
 
 
- let hue = 0;
-  const header = document.querySelector("header");
+  let hue = 0;
+  const hueClass = document.querySelectorAll(".hue-effect");
+  const beatClass = document.querySelectorAll(".beat-effect");
 
   function animateHue() {
     hue = (hue + 0.5) % 360; // cycle through 0–359 degrees
-    header.style.filter = `hue-rotate(${hue}deg)`;
+    hueClass.forEach(control => {
+        control.style.filter = `hue-rotate(${hue}deg)`;
+   });
     requestAnimationFrame(animateHue); // smooth animation loop
+  }
+ function animateBeat() {
+    const scale = 1 + 0.05 * Math.sin(Date.now() / 300); // pulsate every 600ms
+    beatClass.forEach(control => {
+        control.style.transform = `scale(${scale})`;
+    });
+    requestAnimationFrame(animateBeat); // smooth animation loop
   }
 
 simulateDay();
 animateHue();
-
+animateBeat();
