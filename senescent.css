@@ -25,6 +25,16 @@
   margin-bottom: 1rem;
 }
 
+.back-logo {
+    width: 200px;
+    position: sticky;
+    z-index: 1000;
+    float: right;
+    margin-top: -150px;
+    padding-right: 20px;
+    filter: invert(70%);
+}
+
 #map {
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -71,13 +81,13 @@
 }
 
 .number-icon .circle {
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   border-radius: 50%;
   background: white;
   color: black;
-  font-size: 10px;
+  font-size: 12px;
   --font-weight: bold;
   text-align: center;
   border: 1px solid rgb(167, 167, 167); /* optional border */

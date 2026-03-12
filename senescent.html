@@ -11,22 +11,28 @@
 
 <body>
 
+    <div class="lang-switch">
+        <img src="images/br-flag.png" alt="Português" id="ptBtn">
+        <img src="images/us-flag.png" alt="English" id="enBtn">
+    </div>
+
     <!-- Header Section -->
-    <header>
+    <header class="lab-front">
         <canvas id="starfield"></canvas>
         <div class="header-content">
-            <h1>Participate</h1>
-            <p>Add your expertise in Technology, Science, or Construction. When three specialists in the same area
-                unite, a group is formed. Everyone can then follow their progress right here.</p>
+            <h1>CELOBI-1 FINDING</h1>
+            <p>Add your expertise in Technology, Science, or Construction. When three specialists in the same area unite, a group is formed. Everyone can then follow their progress right here.</p>
         </div>
     </header>
+
+    <a href="index.html" class="back-link"><img src="images/serieslogo.png" alt="Series Logo" class="lang lang-pt back-logo"></a>
+    <a href="index.html" class="back-link"><img src="images/serieslogoen.png" alt="Series Logo" class="lang lang-en back-logo"></a>
 
     <!-- Map Section -->
     <section class="participate-map">
         <h2>Global Locations Suitable for Space Launch Permits</h2>
         <div id="map" style="width: 100%; height: 400px;"></div>
-        <div id="status-bar" style="padding:6px; background:#f0f0f0; font-family:sans-serif;">Not on Map? Notify Our
-            Team!</div>
+        <div id="status-bar" style="padding:6px; background:#f0f0f0; font-family:sans-serif;">Do you understand the <a href="index.html">Mission</a>? Join by clicking on a launching facility near you. Not on Map? <a href="mailto:contact@acspacca.com.br?subject=CELOBI_MapLocation">Notify our team</a>!</div>
         <!-- Registration Row -->
         <div class="register-row">
             <select id="city-select" class="register-select">
@@ -163,8 +169,8 @@
         const select = document.getElementById('city-select');
         const markers = {};
         const map = L.map('map', {
-            center: [20, 16],   // global center
-            zoom: 2.2,           // zoom level
+            center: [25, 20],   // global center
+            zoom: 1.8,           // zoom level
             zoomControl: false, // remove zoom buttons
             dragging: false,    // disable dragging
             scrollWheelZoom: false, // disable scroll zoom
@@ -279,8 +285,8 @@
             const numberIcon = L.divIcon({
                 className: 'number-icon',
                 html: `<div class="circle">${markerId}</div>`,
-                iconSize: [14, 14],
-                iconAnchor: [8, 8]
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
             });
 
             const marker = L.marker(city.coords, { icon: numberIcon })
@@ -342,6 +348,27 @@
             document.getElementById('status-bar').textContent = `${cityObj.name} ${cityObj.reason}`;
 
         });
+
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+        }
+
+        document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
+        document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
+
+        showLanguage('en');        
+
+        let hue = 0;
+        const header = document.querySelector('.back-logo');
+
+        function animateHue() {
+            hue = (hue + 1) % 360; // cycle through 0–359 degrees
+            header.style.filter = `hue-rotate(${hue}deg) invert(70%)`;
+            requestAnimationFrame(animateHue); // smooth animation loop
+        }
+
+        animateHue();
 
     </script>
 

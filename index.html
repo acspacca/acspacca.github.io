@@ -15,8 +15,7 @@
         <img src="images/us-flag.png" alt="English" id="enBtn">
     </div>
 
-    <header>
-        <canvas id="starfield"></canvas>
+    <header class="book-front">
         <div class="header-content">
             <h1>A. C. SPACCA</h1>
             <p class="lang lang-pt">...em sua mais nova série: ESTRANHO E ASSUSTADOR</p>
@@ -30,6 +29,9 @@
         <p class="lang lang-en">This site has not been promoted yet and is under construction - Come back soon!</p>
     </div>
 
+    <img src="images/serieslogo.png" alt="Estranho e Assustador" class="lang lang-pt series-logo">
+    <img src="images/serieslogoen.png" alt="Estranho e Assustador" class="lang lang-en series-logo">
+
     <section class="books">
 
         <h2 class="lang lang-pt">Livros Publicados</h2>
@@ -38,7 +40,7 @@
         <div class="book-row">
 
             <div class="book-card">
-                <img src="images/foradacerca.jpg" alt="The Silent Horizon cover" class="book-cover">
+                <img src="images/foradacerca.jpg" alt="Fora da Cerca" class="book-cover">
                 <div class="book-info">
                     <h3 class="lang lang-pt">Fora da Cerca</h3>
                     <h4 class="lang lang-pt">Sete Contos da Roça</h4>
@@ -57,14 +59,14 @@
             <div class="book-card new">
                 <span class="lang lang-pt badge">Novo</span>
                 <span class="lang lang-en badge">New</span>
-                <img src="images/ofuturomudou.jpg" alt="Echoes of Tomorrow cover" class="book-cover">
+                <img src="images/ofuturomudou.jpg" alt="O Futuro Mudou" class="book-cover">
                 <div class="book-info">
                     <h3 class="lang lang-pt">O Futuro Mudou</h3>
                     <h4 class="lang lang-pt">Revelações da Inteligência Artificial</h4>
                     <p class="lang lang-pt">Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
                     <h3 class="lang lang-en">The Future Has Changed</h3>
                     <h4 class="lang lang-en">Revelations of Artificial Intelligence</h4>
-                    <p class="lang lang-en">Nine revelations present nine electrifying tales that explore the impact of the arrival of artificial intelligence on the future humanity thought it knew. From haunted ruins, a lunar colony, to the depths illuminated by cities, these adventures unravel the terrifying beauty of a world reshaped by the smartest mind the universe may never have intended to conceive.<br /><br />These nine stories are not warnings. They are revelations. Leaving the doubt: Is this fiction or reality?</p>  
+                    <p class="lang lang-en">Nine revelations present nine electrifying tales that explore the impact of the arrival of artificial intelligence on the future humanity thought it knew. From haunted ruins, a lunar colony, to the depths illuminated by cities, these adventures unravel the terrifying beauty of a world reshaped by the smartest mind the universe may never have intended to conceive.<br /><br />These nine stories are not warnings. They are revelations. Leaving the doubt: Is this fiction or reality?</p>
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="#" target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
@@ -83,7 +85,7 @@
         <h2 class="lang lang-en">Coming Soon...</h2>
 
         <div class="book-card upcoming-card">
-            <img src="images/corredoresdosubmundo.jpg" alt="The Silent Horizon cover" class="book-cover">
+            <img src="images/corredoresdosubmundo.jpg" alt="Corredores do Submundo" class="book-cover">
             <div class="book-info">
                 <h3 class="lang lang-pt">Corredores do Submundo</h3>
                 <h4 class="lang lang-pt">A Vida Após Exaustão da Crosta</h4>
@@ -114,8 +116,10 @@
                 <div class="app-info">
                     <h3 class="lang lang-pt">XXX-XXXXXX</h3>
                     <h3 class="lang lang-en">XXX-XXXXXX</h3>
-                    <p class="lang lang-pt">Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo arcade dos anos 70 em desenvolvimento para lançamento no inicio de 2026.</p>
-                    <p class="lang lang-en">A addictive mobile game of adventure and ghostly mystery in the style of 70s arcade games under development for release at the beginning of 2026.</p>
+                    <p class="lang lang-pt">Um jogo mobile viciante de aventura e mistério fantasmagorico no estilo
+                        arcade dos anos 70 em desenvolvimento para lançamento no inicio de 2026.</p>
+                    <p class="lang lang-en">A addictive mobile game of adventure and ghostly mystery in the style of 70s
+                        arcade games under development for release at the beginning of 2026.</p>
                     <div class="lang lang-pt download-links"><a href="#">Download no Google Play</a></div>
                     <div class="lang lang-en download-links"><a href="#">Get it on Google Play</a></div>
                 </div>
@@ -134,8 +138,10 @@
                     <div class="lang lang-pt ">Subsuperficie Esteril sem Climatização</div>
                     <div class="lang lang-en ">Sterile Subsurface without Climate Control</div>
                     <div id="readings3">Reading 3</div>
-                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b> dias de reação.</div>
-                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b> days of reaction.</div>  
+                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b>
+                        dias de reação.</div>
+                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b>
+                        days of reaction.</div>
                 </div>
             </div>
         </div>
@@ -170,39 +176,54 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="lang lang-pt">Declaração de Missão de Pesquisa</h2>
-            <h4 class="lang lang-pt">No CELOBI - Centro de Estudos em Logística Biológica, lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4></p>
+            <h4 class="lang lang-pt">No Centro de Estudos em Logística Biológica (CELOBI), lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
+            </p>
             <p class="lang lang-pt">A missão possui três objetivos interconectados:</p>
-            <p class="lang lang-pt">● <a href="#1"><b>Astrobiologia e Panspermia:</b></a> Investigar material análogo à panspermia para compreender sua resiliência e potencial atividade biológica.</p>
-            <p class="lang lang-pt">● <a href="#2"><b>Engenharia Estéril Subterrânea:</b></a> Desenvolver um sistema subterrâneo totalmente automatizado de incubação para cultivar material análogo extraterrestre sem contaminação da biosfera da subsuperficie.</p>
-            <p class="lang lang-pt">● <a href="#3"><b>Senescência e Saúde Humana:</b></a> Identificar substâncias bioativas exógenas capazes de eliminar células senescentes ou modular seu fenótipo secretório nocivo, com implicações profundas para a longevidade e a medicina regenerativa.</p>
-            <p class="lang lang-pt">Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico mais amplo.</p>
+            <p class="lang lang-pt">● <a href="#1"><b>Astrobiologia e Panspermia:</b></a> Investigar material análogo à
+                panspermia para compreender sua resiliência e potencial atividade biológica.</p>
+            <p class="lang lang-pt">● <a href="#2"><b>Engenharia Estéril Subterrânea:</b></a> Desenvolver um sistema
+                subterrâneo totalmente automatizado de incubação para cultivar material análogo extraterrestre sem
+                contaminação da biosfera da subsuperficie.</p>
+            <p class="lang lang-pt">● <a href="#3"><b>Senescência e Saúde Humana:</b></a> Identificar substâncias
+                bioativas exógenas capazes de eliminar células senescentes ou modular seu fenótipo secretório nocivo,
+                com implicações profundas para a longevidade e a medicina regenerativa.</p>
+            <p class="lang lang-pt">Este é um empreendimento custoso, hostil e de baixa expectativa, mas ao documentá-lo
+                de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico
+                mais amplo.</p>
             <h2 class="lang lang-en">Research Mission Statement</h2>
-            <h4 class="lang lang-en">At CELOBI - Center for Studies in Biological Logistics, we lead a pioneering effort to explore the frontier where astrobiology, engineering, and biology intersect.</h4></p>
+            <h4 class="lang lang-en">At CELOBI (Centro de Estudos em Logística Biológica) - Center for Studies in Biological Logistics, we lead a pioneering effort
+                to explore the frontier where astrobiology, engineering, and biology intersect.</h4>
+            </p>
             <p class="lang lang-en">The mission has three interconnected objectives:</p>
-            <p class="lang lang-en">● <a href="#"><b>Astrobiology and Panspermia:</b></a> Investigate panspermia-analog material to understand its resilience and potential biological activity.</p>
-            <p class="lang lang-en">● <a href="#"><b>Sterile Underground Engineering:</b></a> Develop a fully automated underground incubation system to cultivate extraterrestrial-analog material without contamination by the subsurface biosphere.</p>
-            <p class="lang lang-en">● <a href="#"><b>Senescence and Human Health:</b></a> Identify bioactive exogenous substances capable of eliminating senescent cells or modulating their harmful secretory phenotype, with profound implications for longevity and regenerative medicine.</p>
-            <p class="lang lang-en">This is a costly, hostile, and low-expectation endeavor, but by documenting it openly, CELOBI ensures that even incremental advances contribute to a broader scientific dialogue.</p>
+            <p class="lang lang-en">● <a href="#"><b>Astrobiology and Panspermia:</b></a> Investigate panspermia-analog
+                material to understand its resilience and potential biological activity.</p>
+            <p class="lang lang-en">● <a href="#"><b>Sterile Underground Engineering:</b></a> Develop a fully automated
+                underground incubation system to cultivate extraterrestrial-analog material without contamination by the
+                subsurface biosphere.</p>
+            <p class="lang lang-en">● <a href="#"><b>Senescence and Human Health:</b></a> Identify bioactive exogenous
+                substances capable of eliminating senescent cells or modulating their harmful secretory phenotype, with
+                profound implications for longevity and regenerative medicine.</p>
+            <p class="lang lang-en">This is a costly, hostile, and low-expectation endeavor, but by documenting it
+                openly, CELOBI ensures that even incremental advances contribute to a broader scientific dialogue.</p>
             <div class="button"><a href="senescent.html" class="lang lang-en">Participate</a></div>
-            <div class="button"><a href="senescent.html" class="lang lang-pt">Possui estrutura ou conhecimento? Não fique de fora, participe você também!</a></div>
+            <div class="button"><a href="senescent.html" class="lang lang-pt">Participe</a></div>
         </div>
     </div>
 
-    <script src="js/starfield.js" defer></script>
     <script src="js/modalscreens.js" defer></script>
     <script src="js/holoborder.js" defer></script>
 
     <script>
-        
-    function showLanguage(lang) {
-        document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
-    }
 
-    document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
-    document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
+        function showLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+        }
 
-    showLanguage('pt');
+        document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
+        document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
+
+        showLanguage('pt');
 
     </script>
 

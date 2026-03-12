@@ -62,7 +62,16 @@ function updateGradient() {
     }
 }
 
-// Initialize
+
+ let hue = 0;
+  const header = document.querySelector("header");
+
+  function animateHue() {
+    hue = (hue + 0.5) % 360; // cycle through 0–359 degrees
+    header.style.filter = `hue-rotate(${hue}deg)`;
+    requestAnimationFrame(animateHue); // smooth animation loop
+  }
+
 simulateDay();
-//updateGradient();
+animateHue();
 

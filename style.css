@@ -7,14 +7,25 @@ body {
 
 header {
     background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-    background: linear-gradient(160deg, #000000, #001f3f, #003366, #004080);
-    background: linear-gradient(160deg, #001f3f, #003366, #004080);
     position: relative;
     height: auto;
-    /* adjust as needed */
     overflow: hidden;
     color: white;
     text-align: center;
+}
+
+.book-front{
+    background-image: url('images/backbanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: hue-rotate(0deg);
+    transition: filter 1s linear;
+}
+
+.lab-front{
+    background: linear-gradient(160deg, #000000, #001f3f, #003366, #004080);
+    background: linear-gradient(160deg, #001f3f, #003366, #004080);
 }
 
 #starfield {
@@ -25,28 +36,22 @@ header {
     height: 100%;
     display: block;
     z-index: 0;
-    /* behind everything */
 }
 
 .header-content {
     position: relative;
     z-index: 1;
-    /* ensures text is above canvas */
     padding: 2rem 1rem;
 }
 
 .header-logo {
     position: absolute;
     top: 15px;
-    /* distance from top */
     right: 15px;
-    /* distance from right */
-    width: 30px;
-    /* size of the image */
+    width: 20px;
     height: auto;
     cursor: pointer;
     z-index: 2;
-    /* above canvas */
 }
 
 header h1 {
@@ -70,11 +75,10 @@ h2 {
 
 .books {
     display: flex;
-    /* makes cards sit side by side */
     gap: 1.5rem;
     flex-wrap: wrap;
-    /* allows wrapping on smaller screens */
     justify-content: center;
+    margin-top: 30px;
 }
 
 .book-row {
@@ -90,19 +94,23 @@ h2 {
     border-radius: 8px;
     padding: 1rem;
     flex: 1 1 300px;
-    /* ensures cards can shrink/grow */
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    /* mobile default: stacked */
     align-items: center;
     text-align: center;
 }
 
+.series-logo{
+    position:absolute;
+    width:300px;
+    top:230px;
+    margin-left: 60px;
+}
+
 .book-cover {
-    width: 100%;
-    max-width: 160px;
+    width: 200px;
     height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
@@ -320,8 +328,7 @@ footer a:hover {
 }
 
 .app-image {
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -428,26 +435,37 @@ footer a:hover {
 @media (min-width: 768px) {
 
     .header-logo {
-        width: 60px;
-        /* size of the image */
+        width: 40px;
+    }
+
+    .books{
+        margin-top: 0px;
     }
 
     .book-card {
         flex-direction: row;
-        /* inside card: image left, text right */
         align-items: flex-start;
         text-align: left;
     }
 
     .book-cover {
+        float: left;
         margin: 0 1.5rem 0 0;
-        max-width: 160px;
+        width: 160px;
     }
 
     .book-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .series-logo {
+        position:absolute;
+        top:230px;
+        right:30px;
+        width:300px;
+        float:right;
     }
 
     .app-card {
@@ -457,6 +475,7 @@ footer a:hover {
     }
 
     .app-image {
+        width: 160px;
         margin-right: 1.5rem;
     }
 
