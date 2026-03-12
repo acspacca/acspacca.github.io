@@ -292,13 +292,17 @@
   }
 
   .back-logo {
-    width: 100px;
+    width: 80px;
     position: sticky;
     z-index: 1000;
     float: right;
-    margin-top: -160px;
+    margin-top: -170px;
     padding-right: 5px;
     filter: invert(70%);
+  }
+
+  .group-feed {
+    padding-bottom: 20px;
   }
 
   .section {
