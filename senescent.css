@@ -26,13 +26,13 @@
 }
 
 .back-logo {
-    width: 200px;
-    position: sticky;
-    z-index: 1000;
-    float: right;
-    margin-top: -150px;
-    padding-right: 20px;
-    filter: invert(70%);
+  width: 200px;
+  position: sticky;
+  z-index: 1000;
+  float: right;
+  margin-top: -150px;
+  padding-right: 20px;
+  filter: invert(70%);
 }
 
 #map {
@@ -65,7 +65,7 @@
   text-align: center;
   line-height: 24px;
   cursor: pointer;
-  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .tooltip {
@@ -90,11 +90,13 @@
   font-size: 12px;
   --font-weight: bold;
   text-align: center;
-  border: 1px solid rgb(167, 167, 167); /* optional border */
+  border: 1px solid rgb(167, 167, 167);
+  /* optional border */
 }
 
 .number-icon .circle.selected {
-  border: 2px solid red; /* highlight selected city */
+  border: 2px solid red;
+  /* highlight selected city */
 }
 
 /* Feed section */
@@ -120,14 +122,14 @@
   border-radius: 6px;
   padding: 1rem;
   max-width: 170px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .group-card:hover {
   background-color: #f0f0f0;
   border-color: #004466;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .group-card h3 {
@@ -188,7 +190,8 @@
 
 /* Modal background overlay */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -196,19 +199,21 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Modal box */
 .modal-content {
   background-color: #fff;
-  width: 80%; /* 80% of screen width */
-  height: 60%; /* 80% of screen height */
+  width: 80%;
+  /* 80% of screen width */
+  height: 60%;
+  /* 80% of screen height */
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   padding: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Header bar */
@@ -267,4 +272,68 @@
 
 .leaflet-interactive:focus {
   outline: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .back-logo {
+    width: 100px;
+    position: sticky;
+    z-index: 1000;
+    float: right;
+    margin-top: -160px;
+    padding-right: 5px;
+    filter: invert(70%);
+  }
+
+  .section {
+    padding: 0;
+  }
+
+  .participate-map {
+    padding: 0;
+  }
+
+  .participate-map h2 {
+    margin-bottom: 1rem;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .register-row {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .register-select {
+    font-size: 0.8rem;
+  }
+
+  .register-button {
+    font-size: 0.8rem;
+  }
+
+  .participate-feed {
+    display: contents;
+  }
+
+  .leaflet-control-attribution {
+    font-size: 10px;
+  }
+
 }
