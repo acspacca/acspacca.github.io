@@ -500,3 +500,15 @@ footer a:hover {
         width: 30px;
     }
 }
+
+@media (max-width: 480px) {
+    .book-info h3 {
+        display: none!important;
+    }
+    .book-info h4 {
+        display: none!important;
+    }
+    .app-info h3 {
+        display: none!important;
+    }
+}
