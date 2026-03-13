@@ -75,7 +75,7 @@ function updateGradient() {
     requestAnimationFrame(animateHue); // smooth animation loop
   }
  function animateBeat() {
-    const scale = 1 + 0.05 * Math.sin(Date.now() / 300); // pulsate every 600ms
+    const scale = 1 + 0.05 * Math.sin(Date.now() / 500); // pulsate every 600ms
     beatClass.forEach(control => {
         control.style.transform = `scale(${scale})`;
     });

@@ -40,19 +40,50 @@
         <div class="book-row">
 
             <div class="book-card">
-                <img src="images/foradacerca.jpg" alt="Fora da Cerca" class="book-cover">
+                <img src="images/foradacerca.jpg" alt="Fora da Cerca" class="lang lang-pt book-cover" id="book1-pt">
+                <img src="images/overthefence.jpg" alt="Fora da Cerca" class="lang lang-en book-cover" id="book1-en">
                 <div class="book-info">
+                    
                     <h3 class="lang lang-pt">Fora da Cerca</h3>
                     <h4 class="lang lang-pt">Sete Contos da Roça</h4>
-                    <p class="lang lang-pt">Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
+                    <div class="lang lang-pt" id="book1-pt-set1">
+                        <p class="lang lang-pt book1-set1">Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
+                    </div>
+                    <div class="lang lang-pt" id="book1-pt-set2" style="display: none !important;">
+                        <ul style="margin: 0; padding-left: 20px;padding-top: 10px;">
+                            <li><b>Terras Batidas:</b> Jesibel depara-se com um pesadelo que transpôs os limites do medo e se fez realidade.</li>
+                            <li><b>Mata Fechada:</b> Um jovem descobre que não é só a coragem e determinação que fazem História.</li>
+                            <li><b>Milhas de Milho:</b> Uma jornada que desafia a lógica e apresenta uma decisão que desafia a jornada.</li>
+                            <li><b>Sábado Perdido:</b> Não saber o que acontece nem sempre é o melhor caminho. Nesse caso seria.</li>
+                            <li><b>O Bosteiro:</b> É por causa do Denis que dizem: "Têm coisas que só acontecem no interior".</li>
+                            <li><b>A Casa da Velha:</b> Um lugar onde histórias antigas ganham nova vida — no sentido literal.</li> 
+                            <li><b>O Espaço Caipira:</b> No interior, onde a terra se estende sem fim, o espírito ainda clama por espaço.</li>
+                        </ul>
+                    </div>
+
                     <h3 class="lang lang-en">Over The Fence</h3>
                     <h4 class="lang lang-en">Seven Tales from the Countryside</h4>
-                    <p class="lang lang-en">Seven chilling tales told in seven different ways, all full of adventures, mysteries, and surprises. But each leaving that desire for more. A collection that will not only be read and reread but also told wherever there is an opportunity. Unforgettable characters in strange and scary events.<br /><br />As our narrator would say: "It's for laughing and it's for crying, it's for feeling scared, and it's for being amazed, but outside the fence, it's really for having fun!".</p>
+                    <div class="lang lang-en" id="book1-en-set1">
+                        <p class="lang lang-en">Seven chilling tales told in seven different ways, all full of adventures, mysteries, and surprises. But each leaving that desire for more. A collection that will not only be read and reread but also told wherever there is an opportunity. Unforgettable characters in strange and scary events.<br /><br />As our narrator would say: "It's for laughing and it's for crying, it's for feeling scared, and it's for being amazed, but outside the fence, it's really for having fun!".</p>
+                    </div>
+                    <div class="lang lang-en" id="book1-en-set2" style="display: none !important;">
+                        <ul style="margin: 0; padding-left: 20px;padding-top: 10px;">
+                            <li><b>Dirt Roads:</b> Jesibel depara-se com um pesadelo que transpôs os limites do medo e se fez realidade.</li>
+                            <li><b>Thick Brush:</b> Um jovem descobre que não é só a coragem e determinação que fazem História.</li>
+                            <li><b>Miles of Corn:</b> Uma jornada que desafia a lógica e apresenta uma decisão que desafia a jornada.</li>
+                            <li><b>Lost Saturday:</b> Não saber o que acontece nem sempre é o melhor caminho. Nesse caso seria.</li>
+                            <li><b>The Dunghill:</b> É por causa do Denis que dizem: "Têm coisas que só acontecem no interior".</li>
+                            <li><b>A Hag's House:</b> Um lugar onde histórias antigas ganham nova vida — no sentido literal.</li> 
+                            <li><b>Hillbilly Space:</b> No interior, onde a terra se estende sem fim, o espírito ainda clama por espaço.</li>
+                        </ul>
+                    </div>
+                    
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
                         <a href="https://produto.mercadolivre.com.br/MLB-4514346105-livro-fora-da-cerca-sete-contos-da-roca-estranho-e-assustador-_JM" target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
                         <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
+
                 </div>
             </div>
 
@@ -216,14 +247,49 @@
     <script>
 
         function showLanguage(lang) {
+            if(document.getElementById("book1-pt").src.includes("foradacercab.jpg"))
+                document.getElementById('book1-pt').click();
+            if(document.getElementById("book1-en").src.includes("overthefenceb.jpg"))
+                document.getElementById('book1-en').click();
+
             document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+        }
+        function switchContent(bookId) {
+            const book = document.getElementById(bookId);
+            switch(bookId){
+                case "book1-pt":
+                    if (book.src.includes("foradacerca.jpg")) {
+                        book.src = "images/foradacercab.jpg";
+                        document.getElementById("book1-pt-set1").style.display = "none";
+                        document.getElementById("book1-pt-set2").style.display = "block";
+                    } else {
+                        book.src = "images/foradacerca.jpg";
+                        document.getElementById("book1-pt-set1").style.display = "block";
+                        document.getElementById("book1-pt-set2").style.display = "none";
+                    }
+                break;
+                case "book1-en":
+                    if (book.src.includes("overthefence.jpg")) {
+                        book.src = "images/overthefenceb.jpg";
+                        document.getElementById("book1-en-set1").style.display = "none";
+                        document.getElementById("book1-en-set2").style.display = "block";
+                    } else {
+                        book.src = "images/overthefence.jpg";
+                        document.getElementById("book1-en-set1").style.display = "block";
+                        document.getElementById("book1-en-set2").style.display = "none";
+                    }
+                break;
+            }
         }
 
         document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
         document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
+        document.getElementById("book1-pt").addEventListener("click", () => switchContent("book1-pt"));
+        document.getElementById("book1-en").addEventListener("click", () => switchContent("book1-en"));
 
         showLanguage('pt');
+        
 
     </script>
 
