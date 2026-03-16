@@ -21,12 +21,19 @@
         <canvas id="starfield"></canvas>
         <div class="header-content">
             <h1>CELOBI-1 FINDING</h1>
-            <p>Add your expertise in Technology, Science, or Construction. When three specialists in the same area unite, a group is formed. Everyone can then follow their progress right here.</p>
+            <p>Add your expertise to form a group. Everyone can then follow progress right here.</p>
         </div>
+        <p class="header-logo" style="font-size: 10px;margin-top:85px;width:150px;text-align: end;">New book series:</p>
+        <img src="images/celobi1.jpg" alt="Author logo" class="header-logo" style="width: 60px;">
     </header>
 
     <a href="index.html" class="back-link"><img src="images/serieslogo.png" alt="Series Logo" class="lang lang-pt back-logo"></a>
     <a href="index.html" class="back-link"><img src="images/serieslogoen.png" alt="Series Logo" class="lang lang-en back-logo"></a>
+
+    <div class="notice-bar">
+        <p class="lang lang-pt">Este site ainda não foi promovido e está em construção - Volte em breve!</p>
+        <p class="lang lang-en">This site has not been promoted yet and is under construction - Come back soon!</p>
+    </div>
 
     <!-- Map Section -->
     <section class="participate-map">
@@ -329,8 +336,8 @@
                 m.setIcon(L.divIcon({
                     className: 'number-icon',
                     html: `<div class="circle">${cityObj.id}</div>`,
-                    iconSize: [14, 14],
-                    iconAnchor: [8, 8]
+                    iconSize: [20, 20],
+                    iconAnchor: [10, 10]
                 }));
             });
 
@@ -340,8 +347,8 @@
             selectedMarker.setIcon(L.divIcon({
                 className: 'number-icon',
                 html: `<div class="circle selected">${cityObj.id}</div>`,
-                iconSize: [14, 14],
-                iconAnchor: [8, 8]
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
             }));
 
             // Update status bar

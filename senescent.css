@@ -30,8 +30,8 @@
   position: sticky;
   z-index: 1000;
   float: right;
-  margin-top: -150px;
-  padding-right: 20px;
+  margin-top: -50px;
+  padding-right: 10px;
   filter: invert(70%);
 }
 
