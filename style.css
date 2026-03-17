@@ -284,6 +284,39 @@ footer a:hover {
     cursor: pointer;
 }
 
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.popup img {
+  margin-top: 2%;
+  max-width: 90%;
+  max-height: 90%;
+  border:  2px solid goldenrod;
+}
+
+.popupclose {
+  position: absolute;
+  top: 20px; right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center horizontally */
+  justify-content: top;  /* center vertically */
+  gap: 20px;
+}
+
 .notice-bar {
   background: #e5e7eb; /* light gray */
   color: #1e3a8a;      /* your blue accent */

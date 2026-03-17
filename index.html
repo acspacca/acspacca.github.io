@@ -30,7 +30,7 @@
 
     <img src="images/serieslogo.png" alt="Estranho e Assustador" class="lang lang-pt series-logo">
     <img src="images/serieslogoen.png" alt="Estranho e Assustador" class="lang lang-en series-logo">
- 
+
     <section class="books">
 
         <h2 class="lang lang-pt">Livros Publicados</h2>
@@ -39,68 +39,75 @@
         <div class="book-row">
 
             <div class="book-card">
-                <img src="images/foradacerca.jpg" alt="Fora da Cerca" class="lang lang-pt book-cover" id="book1-pt">
-                <img src="images/overthefence.jpg" alt="Fora da Cerca" class="lang lang-en book-cover" id="book1-en">
+                <div class="image-stack">
+                    <img src="images/foradacerca.jpg" class="lang lang-pt book-cover" onclick="switchContent('book1-pt')" id="book1-pt">
+                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-pt" onclick="openPopup('images/foradacercaposter.jpg')">
+                    <img src="images/overthefence.jpg" class="lang lang-en book-cover" id="book1-en">
+                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-en" onclick="openPopup('images/foradacercaposter.jpg')">
+                </div>
                 <div class="book-info">
-                    
                     <h3 class="lang lang-pt">Fora da Cerca</h3>
                     <h4 class="lang lang-pt">Sete Contos da Roça</h4>
-                    <div class="lang lang-pt" id="book1-pt-set1">
-                        <p class="lang lang-pt book1-set1">Sete contos arrepiantes contadas de sete formas diferentes, todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter mais. Uma coleção que não será somente lida e relida, mas também contada onde houver oportunidade. Personagens inesquesiveis em acontecimentos estranhos e assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é pra chorar, é pra sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
+                    <div class="lang lang-pt">
+                        <p class="lang lang-pt book1-set1">Sete contos arrepiantes contadas de sete formas diferentes,
+                            todos cheios de aventuras, mistérios e surpresas. Mas cada deixando aquele desejo de ter
+                            mais. Uma coleção que não será somente lida e relida, mas também contada onde houver
+                            oportunidade. Personagens inesquesiveis em acontecimentos estranhos e
+                            assustadores.<br /><br />É como diria nossa narradora: "É pra rir e é pra chorar, é pra
+                            sentir medo, e é pra se espantar, mas fora da cerca, é mesmo para se esbaldar!".</p>
                     </div>
-                    <div class="lang lang-pt" id="book1-pt-set2" style="display: none !important;">
-                        <ul style="margin: 0; padding-left: 20px;padding-top: 10px;">
-                            <li><b>Terras Batidas:</b> Jesibel depara-se com um pesadelo que transpôs os limites do medo e se fez realidade.</li>
-                            <li><b>Mata Fechada:</b> Um jovem descobre que não é só a coragem e determinação que fazem História.</li>
-                            <li><b>Milhas de Milho:</b> Uma jornada que desafia a lógica e apresenta uma decisão que desafia a jornada.</li>
-                            <li><b>Sábado Perdido:</b> Não saber o que acontece nem sempre é o melhor caminho. Nesse caso seria.</li>
-                            <li><b>O Bosteiro:</b> É por causa do Denis que dizem: "Têm coisas que só acontecem no interior".</li>
-                            <li><b>A Casa da Velha:</b> Um lugar onde histórias antigas ganham nova vida — no sentido literal.</li> 
-                            <li><b>O Espaço Caipira:</b> No interior, onde a terra se estende sem fim, o espírito ainda clama por espaço.</li>
-                        </ul>
-                    </div>
-
                     <h3 class="lang lang-en">Over The Fence</h3>
                     <h4 class="lang lang-en">Seven Tales from the Countryside</h4>
-                    <div class="lang lang-en" id="book1-en-set1">
-                        <p class="lang lang-en">Seven chilling tales told in seven different ways, all full of adventures, mysteries, and surprises. But each leaving that desire for more. A collection that will not only be read and reread but also told wherever there is an opportunity. Unforgettable characters in strange and scary events.<br /><br />As our narrator would say: "It's for laughing and it's for crying, it's for feeling scared, and it's for being amazed, but outside the fence, it's really for having fun!".</p>
+                    <div class="lang lang-en">
+                        <p class="lang lang-en">Seven chilling tales told in seven different ways, all full of
+                            adventures, mysteries, and surprises. But each leaving that desire for more. A collection
+                            that will not only be read and reread but also told wherever there is an opportunity.
+                            Unforgettable characters in strange and scary events.<br /><br />As our narrator would say:
+                            "It's for laughing and it's for crying, it's for feeling scared, and it's for being amazed,
+                            but outside the fence, it's really for having fun!".</p>
                     </div>
-                    <div class="lang lang-en" id="book1-en-set2" style="display: none !important;">
-                        <ul style="margin: 0; padding-left: 20px;padding-top: 10px;">
-                            <li><b>Dirt Roads:</b> Jesibel depara-se com um pesadelo que transpôs os limites do medo e se fez realidade.</li>
-                            <li><b>Thick Brush:</b> Um jovem descobre que não é só a coragem e determinação que fazem História.</li>
-                            <li><b>Miles of Corn:</b> Uma jornada que desafia a lógica e apresenta uma decisão que desafia a jornada.</li>
-                            <li><b>Lost Saturday:</b> Não saber o que acontece nem sempre é o melhor caminho. Nesse caso seria.</li>
-                            <li><b>The Dunghill:</b> É por causa do Denis que dizem: "Têm coisas que só acontecem no interior".</li>
-                            <li><b>A Hag's House:</b> Um lugar onde histórias antigas ganham nova vida — no sentido literal.</li> 
-                            <li><b>Hillbilly Space:</b> No interior, onde a terra se estende sem fim, o espírito ainda clama por espaço.</li>
-                        </ul>
-                    </div>
-                    
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
-                        <a href="https://produto.mercadolivre.com.br/MLB-4514346105-livro-fora-da-cerca-sete-contos-da-roca-estranho-e-assustador-_JM" target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
-                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                        <a href="https://produto.mercadolivre.com.br/MLB-4514346105-livro-fora-da-cerca-sete-contos-da-roca-estranho-e-assustador-_JM"
+                            target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img
+                                src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
-
                 </div>
             </div>
 
             <div class="book-card new">
                 <span class="lang lang-pt badge">Novo</span>
                 <span class="lang lang-en badge">New</span>
-                <img src="images/ofuturomudou.jpg" alt="O Futuro Mudou" class="book-cover">
+                <div class="image-stack">
+                    <img src="images/ofuturomudou.jpg" class="lang lang-pt book-cover" onclick="switchContent('book2-pt')" id="book2-pt">
+                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-pt" onclick="openPopup('images/ofuturomudouposter.jpg')">
+                    <img src="images/ofuturomudou.jpg" class="lang lang-en book-cover" id="book2-en">
+                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-en" onclick="openPopup('images/ofuturomudouposter.jpg')">
+                </div>
                 <div class="book-info">
                     <h3 class="lang lang-pt">O Futuro Mudou</h3>
                     <h4 class="lang lang-pt">Revelações da Inteligência Artificial</h4>
-                    <p class="lang lang-pt">Nove revelações apresentam nove contos eletrizantes que exploram o impacto da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o universo talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
+                    <p class="lang lang-pt">Nove revelações apresentam nove contos eletrizantes que exploram o impacto
+                        da chegada da inteligência artificial sobre o futuro que a humanidade acreditava conhecer. Das
+                        ruínas assombradas, de uma colônia lunar, das profundezas iluminadas por cidades, essas
+                        aventuras desvendam a beleza aterradora de um mundo remodelado pela mente mais inteligente que o
+                        universo talvez nunca tivesse pretendido conceber.<br /><br />Essas nove histórias não são
+                        alertas. São revelações. Deixando a dúvida: Isso é ficção ou realidade?</p>
                     <h3 class="lang lang-en">The Future Has Changed</h3>
                     <h4 class="lang lang-en">Revelations of Artificial Intelligence</h4>
-                    <p class="lang lang-en">Nine revelations present nine electrifying tales that explore the impact of the arrival of artificial intelligence on the future humanity thought it knew. From haunted ruins, a lunar colony, to the depths illuminated by cities, these adventures unravel the terrifying beauty of a world reshaped by the smartest mind the universe may never have intended to conceive.<br /><br />These nine stories are not warnings. They are revelations. Leaving the doubt: Is this fiction or reality?</p>
+                    <p class="lang lang-en">Nine revelations present nine electrifying tales that explore the impact of
+                        the arrival of artificial intelligence on the future humanity thought it knew. From haunted
+                        ruins, a lunar colony, to the depths illuminated by cities, these adventures unravel the
+                        terrifying beauty of a world reshaped by the smartest mind the universe may never have intended
+                        to conceive.<br /><br />These nine stories are not warnings. They are revelations. Leaving the
+                        doubt: Is this fiction or reality?</p>
                     <div class="purchase-links">
                         <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a>
-                        <a href="https://produto.mercadolivre.com.br/MLB-6449155918-livro-o-futuro-mudou-revelacoes-da-inteligncia-artificial-estranho-e-assustador-_JM" target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
-                        <a href="https://play.google.com/store/books/details/A_C_SPACCA_O_FUTURO_MUDOU?id=JSPHEQAAQBAJ" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                        <a href="https://produto.mercadolivre.com.br/MLB-6449155918-livro-o-futuro-mudou-revelacoes-da-inteligncia-artificial-estranho-e-assustador-_JM"
+                            target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="https://play.google.com/store/books/details/A_C_SPACCA_O_FUTURO_MUDOU?id=JSPHEQAAQBAJ"
+                            target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
                 </div>
             </div>
@@ -119,10 +126,20 @@
             <div class="book-info">
                 <h3 class="lang lang-pt">Corredores do Submundo</h3>
                 <h4 class="lang lang-pt">A Vida Após Exaustão da Crosta</h4>
-                <p class="lang lang-pt">O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a atmosfera e cobriu o planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se sem verde, sem animais, sem esperança. Os adultos, resignados, perderam a vontade de lutar.<br /><br />Mas as crianças viam o fim como palcos de aventuras. Juntos, cavaram um túnel que parecia apenas uma brincadeira, mas se tornou um santuário escondido sob a terra. Essas são histórias "Estranho e Assustador" que se seguiram nos Corredores do Submundo.</p>
+                <p class="lang lang-pt">O mundo finalmente foi despedaçado por uma ejeção de massa coronal que rasgou a
+                    atmosfera e cobriu o planeta com um pó cinzento aterrorizante e sufocante. A superfície tornou-se
+                    sem verde, sem animais, sem esperança. Os adultos, resignados, perderam a vontade de
+                    lutar.<br /><br />Mas as crianças viam o fim como palcos de aventuras. Juntos, cavaram um túnel que
+                    parecia apenas uma brincadeira, mas se tornou um santuário escondido sob a terra. Essas são
+                    histórias "Estranho e Assustador" que se seguiram nos Corredores do Submundo.</p>
                 <h3 class="lang lang-en">Underworld Corridors</h3>
                 <h4 class="lang lang-en">Life After Crust Exhaustion</h4>
-                <p class="lang lang-en">The world was finally shattered by a coronal mass ejection that tore the atmosphere and covered the planet with a terrifying and suffocating gray dust. The surface became without green, without animals, without hope. Adults, resigned, lost the will to fight.<br /><br />But children saw the end as stages of adventures. Together, they dug a tunnel that seemed just a game but became a hidden sanctuary underground. These are "Strange and Scary" stories that followed in the Underworld Corridors.</p>
+                <p class="lang lang-en">The world was finally shattered by a coronal mass ejection that tore the
+                    atmosphere and covered the planet with a terrifying and suffocating gray dust. The surface became
+                    without green, without animals, without hope. Adults, resigned, lost the will to
+                    fight.<br /><br />But children saw the end as stages of adventures. Together, they dug a tunnel that
+                    seemed just a game but became a hidden sanctuary underground. These are "Strange and Scary" stories
+                    that followed in the Underworld Corridors.</p>
                 <div class="lang lang-pt links">
                     <a href="#">Reserve no Amazon</a>
                     <a href="#">Reserve no Barnes & Noble</a>
@@ -168,10 +185,13 @@
                     <div class="lang lang-pt ">Subsuperficie Esteril s/Climatização</div>
                     <div class="lang lang-en ">Sterile Subsurface no Climate Control</div>
                     <div id="readings3">Reading 3</div>
-                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b> dias de reação.</div>
-                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b> days of reaction.</div>
+                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b>
+                        dias de reação.</div>
+                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b>
+                        days of reaction.</div>
                 </div>
-                <img src="images/celobi1.jpg" alt="Author logo" style="cursor: pointer;float: right;width: 60px;opacity: 0.05;" id="aboutBtn">
+                <img src="images/celobi1.jpg" alt="Author logo"
+                    style="cursor: pointer;float: right;width: 60px;opacity: 0.05;" id="aboutBtn">
             </div>
         </div>
     </section>
@@ -205,7 +225,8 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="lang lang-pt">Declaração de Missão de Pesquisa</h2>
-            <h4 class="lang lang-pt">No Centro de Estudos em Logística Biológica (CELOBI), lideramos um esforço pioneiro para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
+            <h4 class="lang lang-pt">No Centro de Estudos em Logística Biológica (CELOBI), lideramos um esforço pioneiro
+                para explorar a fronteira onde astrobiologia, engenharia e biologia se encontram.</h4>
             </p>
             <p class="lang lang-pt">A missão possui três objetivos interconectados:</p>
             <p class="lang lang-pt">● <a href="#1"><b>Astrobiologia e Panspermia:</b></a> Investigar material análogo à
@@ -220,7 +241,8 @@
                 de forma aberta, o CELOBI garante que mesmo avanços incrementais contribuam para um diálogo científico
                 mais amplo.</p>
             <h2 class="lang lang-en">Research Mission Statement</h2>
-            <h4 class="lang lang-en">At CELOBI (Centro de Estudos em Logística Biológica) - Center for Studies in Biological Logistics, we lead a pioneering effort
+            <h4 class="lang lang-en">At CELOBI (Centro de Estudos em Logística Biológica) - Center for Studies in
+                Biological Logistics, we lead a pioneering effort
                 to explore the frontier where astrobiology, engineering, and biology intersect.</h4>
             </p>
             <p class="lang lang-en">The mission has three interconnected objectives:</p>
@@ -239,55 +261,57 @@
         </div>
     </div>
 
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <span class="popupclose" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Popup Image">
+    </div>
+
     <script src="js/modalscreens.js" defer></script>
     <script src="js/holoborder.js" defer></script>
 
     <script>
 
         function showLanguage(lang) {
-            if(document.getElementById("book1-pt").src.includes("foradacercab.jpg"))
-                document.getElementById('book1-pt').click();
-            if(document.getElementById("book1-en").src.includes("overthefenceb.jpg"))
-                document.getElementById('book1-en').click();
-
             document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
         }
         function switchContent(bookId) {
             const book = document.getElementById(bookId);
-            switch(bookId){
-                case "book1-pt":
-                    if (book.src.includes("foradacerca.jpg")) {
-                        book.src = "images/foradacercab.jpg";
-                        document.getElementById("book1-pt-set1").style.display = "none";
-                        document.getElementById("book1-pt-set2").style.display = "block";
-                    } else {
-                        book.src = "images/foradacerca.jpg";
-                        document.getElementById("book1-pt-set1").style.display = "block";
-                        document.getElementById("book1-pt-set2").style.display = "none";
-                    }
-                break;
-                case "book1-en":
-                    if (book.src.includes("overthefence.jpg")) {
-                        book.src = "images/overthefenceb.jpg";
-                        document.getElementById("book1-en-set1").style.display = "none";
-                        document.getElementById("book1-en-set2").style.display = "block";
-                    } else {
-                        book.src = "images/overthefence.jpg";
-                        document.getElementById("book1-en-set1").style.display = "block";
-                        document.getElementById("book1-en-set2").style.display = "none";
-                    }
-                break;
+            if (bookId == 'book1-pt') {
+                if (book.src.includes("images/foradacerca.jpg")) {
+                    book.src = "images/foradacercab.jpg";
+                }
+                else {
+                    book.src = "images/foradacerca.jpg";
+                }
+            } else if (bookId == 'book2-pt') {
+                if (book.src.includes("images/ofuturomudou.jpg")) {
+                    book.src = "images/ofuturomudoub.jpg";
+                }
+                else {
+                    book.src = "images/ofuturomudou.jpg";
+                }
             }
+            // const isPt = book.classList.contains('lang-pt');
+            // const otherId = isPt ? bookId.replace('pt', 'en') : bookId.replace('en', 'pt');
+            // const otherBook = document.getElementById(otherId);
+            // book.style.display = 'none';
+            // otherBook.style.display = 'block';  
+        }
+        function openPopup(imgSrc) {
+            document.getElementById("popup-img").src = imgSrc;
+            document.getElementById("popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
         }
 
         document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
         document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
-        document.getElementById("book1-pt").addEventListener("click", () => switchContent("book1-pt"));
-        document.getElementById("book1-en").addEventListener("click", () => switchContent("book1-en"));
 
         showLanguage('pt');
-        
+
 
     </script>
 
