@@ -270,10 +270,10 @@
     <script>
 
         const messages = [
-        "📚 Senescence and Human Health Manuscript Posted for Preprints on bioRxiv (20260318)",
-        "📚 Sterile Underground Engineering Posted for Preprints on arXiv (20260318)",
+        "📚 Senescence and Human Health Manuscript Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712705&roleName=author' target='_blank'>(712705-20260318)</a>",
+        "📚 Sterile Underground Engineering Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712728&roleName=author' target='_blank'>(712728-20260318)</a>",
         "This site has not been promoted yet and is under construction - Come back soon!",
-        "📚 Astrobiology and Panspermia Posted for Preprints on MDPI (20260318)",
+        "📚 Astrobiology and Panspermia Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712734&roleName=author' target='_blank'>(712734-20260318)</a>",
         "🎮 Arcade-style game still holds for launch in 2026!"
         ];
 
@@ -328,7 +328,7 @@ let index = 0;
 const bar = document.getElementById("notice-bar");
 
 function showMessage() {
-  bar.textContent = messages[index];
+  bar.innerHTML  = messages[index];
   index = (index + 1) % messages.length;
 }
 
