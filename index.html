@@ -23,7 +23,7 @@
         </div>
     </header>
 
-    <div class="notice-bar">
+    <div class="notice-bar" id="notice-bar">
         <p class="lang lang-pt">Este site ainda não foi promovido e está em construção - Volte em breve!</p>
         <p class="lang lang-en">This site has not been promoted yet and is under construction - Come back soon!</p>
     </div>
@@ -269,6 +269,14 @@
 
     <script>
 
+        const messages = [
+        "📚 Senescence and Human Health Manuscript Posted for Preprints on bioRxiv (20260318)",
+        "📚 Sterile Underground Engineering Posted for Preprints on arXiv (20260318)",
+        "This site has not been promoted yet and is under construction - Come back soon!",
+        "📚 Astrobiology and Panspermia Posted for Preprints on MDPI (20260318)",
+        "🎮 Arcade-style game still holds for launch in 2026!"
+        ];
+
         function showLanguage(lang) {
             document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
@@ -316,9 +324,18 @@
         document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
         document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
 
+let index = 0;
+const bar = document.getElementById("notice-bar");
+
+function showMessage() {
+  bar.textContent = messages[index];
+  index = (index + 1) % messages.length;
+}
+
+setInterval(showMessage, 4000); // change every 4 seconds
+showMessage();
+
         showLanguage('pt');
-
-
     </script>
 
 </body>
