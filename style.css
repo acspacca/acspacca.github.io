@@ -299,6 +299,7 @@ footer a:hover {
   max-width: 90%;
   max-height: 90%;
   border:  2px solid goldenrod;
+  border-radius: 8px;
 }
 
 .popupclose {
@@ -358,7 +359,6 @@ footer a:hover {
     flex: 1 1 300px;
     display: flex;
     flex-direction: column;
-    /* mobile default */
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -434,6 +434,15 @@ footer a:hover {
     text-align: center;
 }
 
+.poster{
+    margin-top:-60px;
+    margin-left:90px;
+    border:1px solid goldenrod;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
 .holo-border {
     border: 3px solid;
     border-radius: 20px;
@@ -445,6 +454,12 @@ footer a:hover {
   to { border-image-source: linear-gradient(45deg, #8ea2c999, #3b608b99, #0000ff99, #bfe8ff99, #679ddb99); }
 }
 
+.rotate-ccw {
+  transform: rotate(-90deg); /* negative = counterclockwise */
+}
+.tilt-ccw {
+  transform: rotate(45deg); /* negative = counterclockwise */
+}
 .lang {
   display: none; /* hide by default */
 }
@@ -540,6 +555,9 @@ footer a:hover {
 
 @media (max-width: 480px) {
     .book-info h3 {
+        display: none!important;
+    }
+    .books h2 {
         display: none!important;
     }
     .book-info h4 {

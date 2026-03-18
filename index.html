@@ -41,9 +41,9 @@
             <div class="book-card">
                 <div class="image-stack">
                     <img src="images/foradacerca.jpg" class="lang lang-pt book-cover" onclick="switchContent('book1-pt')" id="book1-pt">
-                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-pt" onclick="openPopup('images/foradacercaposter.jpg')">
+                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/foradacercaposter.jpg')">
                     <img src="images/overthefence.jpg" class="lang lang-en book-cover" id="book1-en">
-                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-en" onclick="openPopup('images/foradacercaposter.jpg')">
+                    <img src="images/overthefenceposter.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/overthefenceposter.jpg')">
                 </div>
                 <div class="book-info">
                     <h3 class="lang lang-pt">Fora da Cerca</h3>
@@ -68,10 +68,8 @@
                     </div>
                     <div class="purchase-links">
                         <!-- <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a> -->
-                        <a href="https://produto.mercadolivre.com.br/MLB-4514346105-livro-fora-da-cerca-sete-contos-da-roca-estranho-e-assustador-_JM"
-                            target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
-                        <a href="https://play.google.com/store/books/details?id=aRahEQAAQBAJ" target="_blank"><img
-                                src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                        <a href="https://produto.mercadolivre.com.br/MLB-4514346105-livro-fora-da-cerca-sete-contos-da-roca-estranho-e-assustador-_JM" target="_blank" id="b1ml"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="https://books.google.com.br/books/about?id=aRahEQAAQBAJ&redir_esc=y" target="_blank" id="b1link"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
                 </div>
             </div>
@@ -81,9 +79,9 @@
                 <span class="lang lang-en badge">New</span>
                 <div class="image-stack">
                     <img src="images/ofuturomudou.jpg" class="lang lang-pt book-cover" onclick="switchContent('book2-pt')" id="book2-pt">
-                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-pt" onclick="openPopup('images/ofuturomudouposter.jpg')">
-                    <img src="images/ofuturomudou.jpg" class="lang lang-en book-cover" id="book2-en">
-                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-en" onclick="openPopup('images/ofuturomudouposter.jpg')">
+                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/ofuturomudouposter.jpg')">
+                    <img src="images/thefuturechanged.jpg" class="lang lang-en book-cover" id="book2-en">
+                    <img src="images/thefuturechangedposter.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/thefuturechangedposter.jpg')">
                 </div>
                 <div class="book-info">
                     <h3 class="lang lang-pt">O Futuro Mudou</h3>
@@ -104,10 +102,8 @@
                         doubt: Is this fiction or reality?</p>
                     <div class="purchase-links">
                         <!-- <a href="#"><img src="images/amazon.png" alt="Amazon">Amazon</a> -->
-                        <a href="https://produto.mercadolivre.com.br/MLB-6449155918-livro-o-futuro-mudou-revelacoes-da-inteligncia-artificial-estranho-e-assustador-_JM"
-                            target="_blank"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
-                        <a href="https://play.google.com/store/books/details/A_C_SPACCA_O_FUTURO_MUDOU?id=JSPHEQAAQBAJ"
-                            target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
+                        <a href="https://produto.mercadolivre.com.br/MLB-6449155918-livro-o-futuro-mudou-revelacoes-da-inteligncia-artificial-estranho-e-assustador-_JM" target="_blank" id="b2ml"><img src="images/mercadolivre.png" alt="Mercado Livre">Mercado Livre</a>
+                        <a href="https://books.google.com.br/books/about?id=sG6hEQAAQBAJ&redir_esc=y" target="_blank"><img src="images/playbooks.png" alt="PlayStore">PlayBooks</a>
                     </div>
                 </div>
             </div>
@@ -262,7 +258,8 @@
     </div>
 
     <!-- Popup Modal -->
-    <div id="popup" class="popup">
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="popupclose" style="margin-top:3px;margin-left:3px;color:black;">&times;</span>
         <span class="popupclose" onclick="closePopup()">&times;</span>
         <img id="popup-img" src="" alt="Popup Image">
     </div>
@@ -275,6 +272,15 @@
         function showLanguage(lang) {
             document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+            if(lang=='pt'){
+                document.getElementById('b1ml').style.display = '';
+                document.getElementById('b2ml').style.display = '';
+            } else {
+                document.getElementById('b1ml').style.display = 'none';
+                document.getElementById('b1link').href = 'https://books.google.com.br/books/about?id=sG6hEQAAQBAJ&redir_esc=y';
+                document.getElementById('b2ml').style.display = 'none';
+                
+            }
         }
         function switchContent(bookId) {
             const book = document.getElementById(bookId);
