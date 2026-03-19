@@ -169,25 +169,10 @@
             </div>
             <!-- Second project -->
             <div class="app-card">
-                <div class="app-info" style="text-align: left;">
-                    <h3 class="lang lang-pt">Status Atual de Automatizações</h3>
-                    <h3 class="lang lang-en">Current Status of Automations</h3>
-                    <div class="lang lang-pt ">Superficie</div>
-                    <div class="lang lang-en ">Surface</div>
-                    <div id="readings1">Reading 1</div>
-                    <div class="lang lang-pt ">Subsuperficie Esteril c/Vegetação</div>
-                    <div class="lang lang-en ">Sterile Subsurface with Vegetation</div>
-                    <div id="readings2">Reading 2</div>
-                    <div class="lang lang-pt ">Subsuperficie Esteril s/Climatização</div>
-                    <div class="lang lang-en ">Sterile Subsurface no Climate Control</div>
-                    <div id="readings3">Reading 3</div>
-                    <div class="lang lang-pt label">Margem de 94% com a terceira série aguardando <b id="ttl">188</b>
-                        dias de reação.</div>
-                    <div class="lang lang-en label">Margin of 94% with the third series awaiting <b id="ttl">188</b>
-                        days of reaction.</div>
+                <div class="app-info" style="place-self: center; place-items: anchor-center;">
+                    <h2 class="lang lang-pt">Em Breve...</h2>
+                    <h2 class="lang lang-en">Soon...</h2>
                 </div>
-                <img src="images/celobi1.jpg" alt="Author logo"
-                    style="cursor: pointer;float: right;width: 60px;opacity: 0.05;" id="aboutBtn">
             </div>
         </div>
     </section>
@@ -270,11 +255,7 @@
     <script>
 
         const messages = [
-        "📚 Senescence and Human Health Manuscript Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712705&roleName=author' target='_blank'>(712705-20260318)</a>",
-        "📚 Sterile Underground Engineering Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712728&roleName=author' target='_blank'>(712728-20260318)</a>",
         "This site has not been promoted yet and is under construction - Come back soon!",
-        "📚 Astrobiology and Panspermia Posted for Preprints on bioRxiv <a href='https://submit.biorxiv.org/submission/pdf?msid=BIORXIV/2026/712734&roleName=author' target='_blank'>(712734-20260318)</a>",
-        "🎮 Arcade-style game still holds for launch in 2026!"
         ];
 
         function showLanguage(lang) {
@@ -324,16 +305,16 @@
         document.getElementById("ptBtn").addEventListener("click", () => showLanguage('pt'));
         document.getElementById("enBtn").addEventListener("click", () => showLanguage('en'));
 
-let index = 0;
-const bar = document.getElementById("notice-bar");
+        let index = 0;
+        const bar = document.getElementById("notice-bar");
 
-function showMessage() {
-  bar.innerHTML  = messages[index];
-  index = (index + 1) % messages.length;
-}
+        function showMessage() {
+            bar.innerHTML  = messages[index];
+            index = (index + 1) % messages.length;
+        }
 
-setInterval(showMessage, 4000); // change every 4 seconds
-showMessage();
+        //setInterval(showMessage, 4000); // change every 4 seconds
+        //showMessage();
 
         showLanguage('pt');
     </script>
