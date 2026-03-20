@@ -41,9 +41,9 @@
             <div class="book-card">
                 <div class="image-stack">
                     <img src="images/foradacerca.jpg" class="lang lang-pt book-cover" onclick="switchContent('book1-pt')" id="book1-pt">
-                    <img src="images/foradacercaposter.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/foradacercaposter.jpg')">
-                    <img src="images/overthefence.jpg" class="lang lang-en book-cover" id="book1-en">
-                    <img src="images/overthefenceposter.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/overthefenceposter.jpg')">
+                    <img src="images/foradacercapostericon.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/foradacercaposter.jpg')">
+                    <img src="images/overthefence.jpg" class="lang lang-en book-cover"onclick="switchContent('book1-en')" id="book1-en">
+                    <img src="images/overthefencepostericon.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/overthefenceposter.jpg')">
                 </div>
                 <div class="book-info">
                     <h3 class="lang lang-pt">Fora da Cerca</h3>
@@ -79,9 +79,9 @@
                 <span class="lang lang-en badge">New</span>
                 <div class="image-stack">
                     <img src="images/ofuturomudou.jpg" class="lang lang-pt book-cover" onclick="switchContent('book2-pt')" id="book2-pt">
-                    <img src="images/ofuturomudouposter.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/ofuturomudouposter.jpg')">
-                    <img src="images/thefuturechanged.jpg" class="lang lang-en book-cover" id="book2-en">
-                    <img src="images/thefuturechangedposter.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/thefuturechangedposter.jpg')">
+                    <img src="images/ofuturomudoupostericon.jpg" height="90px" class="lang lang-pt poster tilt-ccw" onclick="openPopup('images/ofuturomudouposter.jpg')">
+                    <img src="images/thefuturechanged.jpg" class="lang lang-en book-cover" onclick="switchContent('book2-en')" id="book2-en">
+                    <img src="images/thefuturechangedpostericon.jpg" height="90px" class="lang lang-en poster tilt-ccw" onclick="openPopup('images/thefuturechangedposter.jpg')">
                 </div>
                 <div class="book-info">
                     <h3 class="lang lang-pt">O Futuro Mudou</h3>
@@ -273,6 +273,7 @@
         }
         function switchContent(bookId) {
             const book = document.getElementById(bookId);
+
             if (bookId == 'book1-pt') {
                 if (book.src.includes("images/foradacerca.jpg")) {
                     book.src = "images/foradacercab.jpg";
@@ -280,14 +281,33 @@
                 else {
                     book.src = "images/foradacerca.jpg";
                 }
-            } else if (bookId == 'book2-pt') {
+            } 
+            else if (bookId == 'book2-pt') {
                 if (book.src.includes("images/ofuturomudou.jpg")) {
                     book.src = "images/ofuturomudoub.jpg";
                 }
                 else {
                     book.src = "images/ofuturomudou.jpg";
                 }
+           }
+
+            else if (bookId == 'book1-en') {
+                if (book.src.includes("images/overthefence.jpg")) {
+                    book.src = "images/overthefenceb.jpg";
+                }
+                else {
+                    book.src = "images/overthefence.jpg";
+                }
+            } 
+            else if (bookId == 'book2-en') {
+                if (book.src.includes("images/thefuturechanged.jpg")) {
+                    book.src = "images/thefuturechangedb.jpg";
+                }
+                else {
+                    book.src = "images/thefuturechanged.jpg";
+                }
             }
+
             // const isPt = book.classList.contains('lang-pt');
             // const otherId = isPt ? bookId.replace('pt', 'en') : bookId.replace('en', 'pt');
             // const otherBook = document.getElementById(otherId);
